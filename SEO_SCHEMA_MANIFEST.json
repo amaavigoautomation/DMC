@@ -1,6 +1,6 @@
 {
   "about-puratech": {
-    "canonical": "https://dmc24.in/about-puratech",
+    "canonical": "http://localhost:3000/about-puratech",
     "page_type": "AboutPage",
     "schema_types": [
       "AboutPage",
@@ -10,7 +10,7 @@
     ]
   },
   "about": {
-    "canonical": "https://dmc24.in/about",
+    "canonical": "http://localhost:3000/about",
     "page_type": "AboutPage",
     "schema_types": [
       "AboutPage",
@@ -21,7 +21,7 @@
     ]
   },
   "admin-login": {
-    "canonical": "https://dmc24.in/admin-login",
+    "canonical": "http://localhost:3000/admin-login",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -31,7 +31,7 @@
     ]
   },
   "admin": {
-    "canonical": "https://dmc24.in/admin",
+    "canonical": "http://localhost:3000/admin",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -41,7 +41,7 @@
     ]
   },
   "ai-itinerary-creation": {
-    "canonical": "https://dmc24.in/ai-itinerary-creation",
+    "canonical": "http://localhost:3000/ai-itinerary-creation",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -53,7 +53,7 @@
     ]
   },
   "b2b-distribution-agent-needs": {
-    "canonical": "https://dmc24.in/b2b-distribution-agent-needs",
+    "canonical": "http://localhost:3000/b2b-distribution-agent-needs",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -65,7 +65,7 @@
     ]
   },
   "b2b": {
-    "canonical": "https://dmc24.in/b2b",
+    "canonical": "http://localhost:3000/b2b",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -76,7 +76,7 @@
     ]
   },
   "b2c": {
-    "canonical": "https://dmc24.in/b2c",
+    "canonical": "http://localhost:3000/b2c",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -87,7 +87,7 @@
     ]
   },
   "bali": {
-    "canonical": "https://dmc24.in/bali",
+    "canonical": "http://localhost:3000/bali",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -98,7 +98,7 @@
     ]
   },
   "benefits-preview": {
-    "canonical": "https://dmc24.in/benefits-preview",
+    "canonical": "http://localhost:3000/benefits-preview",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -108,7 +108,7 @@
     ]
   },
   "benefits": {
-    "canonical": "https://dmc24.in/benefits",
+    "canonical": "http://localhost:3000/benefits",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -119,7 +119,7 @@
     ]
   },
   "blog-management-review": {
-    "canonical": "https://dmc24.in/blog-management-review",
+    "canonical": "http://localhost:3000/blog-management-review",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -130,7 +130,7 @@
     ]
   },
   "blog-management": {
-    "canonical": "https://dmc24.in/blog-management",
+    "canonical": "http://localhost:3000/blog-management",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -141,7 +141,7 @@
     ]
   },
   "blogs": {
-    "canonical": "https://dmc24.in/blogs",
+    "canonical": "http://localhost:3000/blogs",
     "page_type": "CollectionPage",
     "schema_types": [
       "CollectionPage",
@@ -151,7 +151,7 @@
     ]
   },
   "bookings-reservations": {
-    "canonical": "https://dmc24.in/bookings-reservations",
+    "canonical": "http://localhost:3000/bookings-reservations",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -162,7 +162,7 @@
     ]
   },
   "botswana": {
-    "canonical": "https://dmc24.in/botswana",
+    "canonical": "http://localhost:3000/botswana",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -173,7 +173,7 @@
     ]
   },
   "brochure-enquiries": {
-    "canonical": "https://dmc24.in/brochure-enquiries",
+    "canonical": "http://localhost:3000/brochure-enquiries",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -184,7 +184,7 @@
     ]
   },
   "brochures": {
-    "canonical": "https://dmc24.in/brochures",
+    "canonical": "http://localhost:3000/brochures",
     "page_type": "CollectionPage",
     "schema_types": [
       "CollectionPage",
@@ -194,7 +194,7 @@
     ]
   },
   "cambodia": {
-    "canonical": "https://dmc24.in/cambodia",
+    "canonical": "http://localhost:3000/cambodia",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -205,7 +205,7 @@
     ]
   },
   "case-studies": {
-    "canonical": "https://dmc24.in/case-studies",
+    "canonical": "http://localhost:3000/case-studies",
     "page_type": "CollectionPage",
     "schema_types": [
       "CollectionPage",
@@ -215,7 +215,7 @@
     ]
   },
   "case-study-kenya": {
-    "canonical": "https://dmc24.in/case-study-kenya",
+    "canonical": "http://localhost:3000/case-study-kenya",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -227,7 +227,7 @@
     ]
   },
   "case-study-kerala": {
-    "canonical": "https://dmc24.in/case-study-kerala",
+    "canonical": "http://localhost:3000/case-study-kerala",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -239,7 +239,7 @@
     ]
   },
   "case-study-maldives": {
-    "canonical": "https://dmc24.in/case-study-maldives",
+    "canonical": "http://localhost:3000/case-study-maldives",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -251,7 +251,7 @@
     ]
   },
   "case-study-mauritius": {
-    "canonical": "https://dmc24.in/case-study-mauritius",
+    "canonical": "http://localhost:3000/case-study-mauritius",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -263,7 +263,7 @@
     ]
   },
   "case-study-sri-lanka": {
-    "canonical": "https://dmc24.in/case-study-sri-lanka",
+    "canonical": "http://localhost:3000/case-study-sri-lanka",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -275,7 +275,7 @@
     ]
   },
   "case-study-uae": {
-    "canonical": "https://dmc24.in/case-study-uae",
+    "canonical": "http://localhost:3000/case-study-uae",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -287,7 +287,7 @@
     ]
   },
   "connected-dmc-workflow": {
-    "canonical": "https://dmc24.in/connected-dmc-workflow",
+    "canonical": "http://localhost:3000/connected-dmc-workflow",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -299,7 +299,7 @@
     ]
   },
   "contact": {
-    "canonical": "https://dmc24.in/contact",
+    "canonical": "http://localhost:3000/contact",
     "page_type": "ContactPage",
     "schema_types": [
       "ContactPage",
@@ -309,7 +309,7 @@
     ]
   },
   "contracting-products": {
-    "canonical": "https://dmc24.in/contracting-products",
+    "canonical": "http://localhost:3000/contracting-products",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -320,7 +320,7 @@
     ]
   },
   "contracts-and-travel-api-inventory": {
-    "canonical": "https://dmc24.in/contracts-and-travel-api-inventory",
+    "canonical": "http://localhost:3000/contracts-and-travel-api-inventory",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -332,7 +332,7 @@
     ]
   },
   "costing-quotations": {
-    "canonical": "https://dmc24.in/costing-quotations",
+    "canonical": "http://localhost:3000/costing-quotations",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -343,7 +343,7 @@
     ]
   },
   "dashboards-mis": {
-    "canonical": "https://dmc24.in/dashboards-mis",
+    "canonical": "http://localhost:3000/dashboards-mis",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -354,7 +354,7 @@
     ]
   },
   "demo-requests": {
-    "canonical": "https://dmc24.in/demo-requests",
+    "canonical": "http://localhost:3000/demo-requests",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -365,7 +365,7 @@
     ]
   },
   "destinations": {
-    "canonical": "https://dmc24.in/destinations",
+    "canonical": "http://localhost:3000/destinations",
     "page_type": "CollectionPage",
     "schema_types": [
       "CollectionPage",
@@ -375,7 +375,7 @@
     ]
   },
   "dubai": {
-    "canonical": "https://dmc24.in/dubai",
+    "canonical": "http://localhost:3000/dubai",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -386,7 +386,7 @@
     ]
   },
   "egypt": {
-    "canonical": "https://dmc24.in/egypt",
+    "canonical": "http://localhost:3000/egypt",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -397,7 +397,7 @@
     ]
   },
   "email-automation": {
-    "canonical": "https://dmc24.in/email-automation",
+    "canonical": "http://localhost:3000/email-automation",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -407,7 +407,7 @@
     ]
   },
   "enquiry-to-confirmation": {
-    "canonical": "https://dmc24.in/enquiry-to-confirmation",
+    "canonical": "http://localhost:3000/enquiry-to-confirmation",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -419,7 +419,7 @@
     ]
   },
   "faqs-review": {
-    "canonical": "https://dmc24.in/faqs-review",
+    "canonical": "http://localhost:3000/faqs-review",
     "page_type": "FAQPage",
     "schema_types": [
       "FAQPage",
@@ -429,7 +429,7 @@
     ]
   },
   "faqs": {
-    "canonical": "https://dmc24.in/faqs",
+    "canonical": "http://localhost:3000/faqs",
     "page_type": "FAQPage",
     "schema_types": [
       "FAQPage",
@@ -440,7 +440,7 @@
     ]
   },
   "features-preview": {
-    "canonical": "https://dmc24.in/features-preview",
+    "canonical": "http://localhost:3000/features-preview",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -450,7 +450,7 @@
     ]
   },
   "features": {
-    "canonical": "https://dmc24.in/features",
+    "canonical": "http://localhost:3000/features",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -461,7 +461,7 @@
     ]
   },
   "file-wise-booking-profitability": {
-    "canonical": "https://dmc24.in/file-wise-booking-profitability",
+    "canonical": "http://localhost:3000/file-wise-booking-profitability",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -473,7 +473,7 @@
     ]
   },
   "finance-profitability": {
-    "canonical": "https://dmc24.in/finance-profitability",
+    "canonical": "http://localhost:3000/finance-profitability",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -484,7 +484,7 @@
     ]
   },
   "grow-revenue-through-local-sales": {
-    "canonical": "https://dmc24.in/grow-revenue-through-local-sales",
+    "canonical": "http://localhost:3000/grow-revenue-through-local-sales",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -496,7 +496,7 @@
     ]
   },
   "home-preview": {
-    "canonical": "https://dmc24.in/home-preview",
+    "canonical": "http://localhost:3000/home-preview",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -505,7 +505,7 @@
     ]
   },
   "hong-kong": {
-    "canonical": "https://dmc24.in/hong-kong",
+    "canonical": "http://localhost:3000/hong-kong",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -516,7 +516,7 @@
     ]
   },
   "how-to-adopt-dmc24": {
-    "canonical": "https://dmc24.in/how-to-adopt-dmc24",
+    "canonical": "http://localhost:3000/how-to-adopt-dmc24",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -529,7 +529,7 @@
     ]
   },
   "icon-style-preview": {
-    "canonical": "https://dmc24.in/icon-style-preview",
+    "canonical": "http://localhost:3000/icon-style-preview",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -539,7 +539,7 @@
     ]
   },
   "index": {
-    "canonical": "https://dmc24.in/",
+    "canonical": "http://localhost:3000/",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -549,7 +549,7 @@
     ]
   },
   "integrations": {
-    "canonical": "https://dmc24.in/integrations",
+    "canonical": "http://localhost:3000/integrations",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -560,7 +560,7 @@
     ]
   },
   "international-market-control": {
-    "canonical": "https://dmc24.in/international-market-control",
+    "canonical": "http://localhost:3000/international-market-control",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -572,7 +572,7 @@
     ]
   },
   "kenya": {
-    "canonical": "https://dmc24.in/kenya",
+    "canonical": "http://localhost:3000/kenya",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -583,7 +583,7 @@
     ]
   },
   "local-sales-revenue-after-arrival": {
-    "canonical": "https://dmc24.in/local-sales-revenue-after-arrival",
+    "canonical": "http://localhost:3000/local-sales-revenue-after-arrival",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -595,7 +595,7 @@
     ]
   },
   "local-sales": {
-    "canonical": "https://dmc24.in/local-sales",
+    "canonical": "http://localhost:3000/local-sales",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -606,7 +606,7 @@
     ]
   },
   "malaysia": {
-    "canonical": "https://dmc24.in/malaysia",
+    "canonical": "http://localhost:3000/malaysia",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -617,7 +617,7 @@
     ]
   },
   "maldives": {
-    "canonical": "https://dmc24.in/maldives",
+    "canonical": "http://localhost:3000/maldives",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -628,7 +628,7 @@
     ]
   },
   "mauritius": {
-    "canonical": "https://dmc24.in/mauritius",
+    "canonical": "http://localhost:3000/mauritius",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -639,7 +639,7 @@
     ]
   },
   "mid-office": {
-    "canonical": "https://dmc24.in/mid-office",
+    "canonical": "http://localhost:3000/mid-office",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -650,7 +650,7 @@
     ]
   },
   "multi-dmc": {
-    "canonical": "https://dmc24.in/multi-dmc",
+    "canonical": "http://localhost:3000/multi-dmc",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -661,7 +661,7 @@
     ]
   },
   "namibia": {
-    "canonical": "https://dmc24.in/namibia",
+    "canonical": "http://localhost:3000/namibia",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -672,7 +672,7 @@
     ]
   },
   "oman": {
-    "canonical": "https://dmc24.in/oman",
+    "canonical": "http://localhost:3000/oman",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -683,7 +683,7 @@
     ]
   },
   "operations-logistics": {
-    "canonical": "https://dmc24.in/operations-logistics",
+    "canonical": "http://localhost:3000/operations-logistics",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -694,7 +694,7 @@
     ]
   },
   "pricing": {
-    "canonical": "https://dmc24.in/pricing",
+    "canonical": "http://localhost:3000/pricing",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -705,7 +705,7 @@
     ]
   },
   "product-preview": {
-    "canonical": "https://dmc24.in/product-preview",
+    "canonical": "http://localhost:3000/product-preview",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -715,7 +715,7 @@
     ]
   },
   "real-time-reports-dmc-leaders": {
-    "canonical": "https://dmc24.in/real-time-reports-dmc-leaders",
+    "canonical": "http://localhost:3000/real-time-reports-dmc-leaders",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -727,7 +727,7 @@
     ]
   },
   "request-demo": {
-    "canonical": "https://dmc24.in/request-demo",
+    "canonical": "http://localhost:3000/request-demo",
     "page_type": "ContactPage",
     "schema_types": [
       "ContactPage",
@@ -737,7 +737,7 @@
     ]
   },
   "resources": {
-    "canonical": "https://dmc24.in/resources",
+    "canonical": "http://localhost:3000/resources",
     "page_type": "CollectionPage",
     "schema_types": [
       "CollectionPage",
@@ -747,7 +747,7 @@
     ]
   },
   "rwanda": {
-    "canonical": "https://dmc24.in/rwanda",
+    "canonical": "http://localhost:3000/rwanda",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -758,7 +758,7 @@
     ]
   },
   "sales-crm": {
-    "canonical": "https://dmc24.in/sales-crm",
+    "canonical": "http://localhost:3000/sales-crm",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -769,7 +769,7 @@
     ]
   },
   "saudi-arabia": {
-    "canonical": "https://dmc24.in/saudi-arabia",
+    "canonical": "http://localhost:3000/saudi-arabia",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -780,7 +780,7 @@
     ]
   },
   "seo-management": {
-    "canonical": "https://dmc24.in/seo-management",
+    "canonical": "http://localhost:3000/seo-management",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -791,7 +791,7 @@
     ]
   },
   "seychelles": {
-    "canonical": "https://dmc24.in/seychelles",
+    "canonical": "http://localhost:3000/seychelles",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -802,7 +802,7 @@
     ]
   },
   "singapore": {
-    "canonical": "https://dmc24.in/singapore",
+    "canonical": "http://localhost:3000/singapore",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -813,7 +813,7 @@
     ]
   },
   "south-africa": {
-    "canonical": "https://dmc24.in/south-africa",
+    "canonical": "http://localhost:3000/south-africa",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -824,7 +824,7 @@
     ]
   },
   "sri-lanka": {
-    "canonical": "https://dmc24.in/sri-lanka",
+    "canonical": "http://localhost:3000/sri-lanka",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -835,7 +835,7 @@
     ]
   },
   "tanzania": {
-    "canonical": "https://dmc24.in/tanzania",
+    "canonical": "http://localhost:3000/tanzania",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -846,7 +846,7 @@
     ]
   },
   "thailand": {
-    "canonical": "https://dmc24.in/thailand",
+    "canonical": "http://localhost:3000/thailand",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -857,7 +857,7 @@
     ]
   },
   "uae": {
-    "canonical": "https://dmc24.in/dubai",
+    "canonical": "http://localhost:3000/dubai",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -868,7 +868,7 @@
     ]
   },
   "uganda": {
-    "canonical": "https://dmc24.in/uganda",
+    "canonical": "http://localhost:3000/uganda",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -879,7 +879,7 @@
     ]
   },
   "user-management-review": {
-    "canonical": "https://dmc24.in/user-management-review",
+    "canonical": "http://localhost:3000/user-management-review",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -889,7 +889,7 @@
     ]
   },
   "user-management": {
-    "canonical": "https://dmc24.in/user-management",
+    "canonical": "http://localhost:3000/user-management",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -899,7 +899,7 @@
     ]
   },
   "vietnam": {
-    "canonical": "https://dmc24.in/vietnam",
+    "canonical": "http://localhost:3000/vietnam",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -910,7 +910,7 @@
     ]
   },
   "vishal-shah": {
-    "canonical": "https://dmc24.in/vishal-shah",
+    "canonical": "http://localhost:3000/vishal-shah",
     "page_type": "ProfilePage",
     "schema_types": [
       "ProfilePage",
@@ -921,7 +921,7 @@
     ]
   },
   "website-analytics": {
-    "canonical": "https://dmc24.in/website-analytics",
+    "canonical": "http://localhost:3000/website-analytics",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -932,7 +932,7 @@
     ]
   },
   "what-is-dmc24": {
-    "canonical": "https://dmc24.in/what-is-dmc24",
+    "canonical": "http://localhost:3000/what-is-dmc24",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -943,7 +943,7 @@
     ]
   },
   "what-multi-dmc-really-means": {
-    "canonical": "https://dmc24.in/what-multi-dmc-really-means",
+    "canonical": "http://localhost:3000/what-multi-dmc-really-means",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -955,7 +955,7 @@
     ]
   },
   "why-dmc24": {
-    "canonical": "https://dmc24.in/why-dmc24",
+    "canonical": "http://localhost:3000/why-dmc24",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -966,7 +966,7 @@
     ]
   },
   "why-dmcs-need-specialist-software": {
-    "canonical": "https://dmc24.in/why-dmcs-need-specialist-software",
+    "canonical": "http://localhost:3000/why-dmcs-need-specialist-software",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -978,7 +978,7 @@
     ]
   },
   "why-file-wise-pnl-matters": {
-    "canonical": "https://dmc24.in/why-file-wise-pnl-matters",
+    "canonical": "http://localhost:3000/why-file-wise-pnl-matters",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -990,7 +990,7 @@
     ]
   },
   "zambia": {
-    "canonical": "https://dmc24.in/zambia",
+    "canonical": "http://localhost:3000/zambia",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",
@@ -1001,7 +1001,7 @@
     ]
   },
   "zimbabwe": {
-    "canonical": "https://dmc24.in/zimbabwe",
+    "canonical": "http://localhost:3000/zimbabwe",
     "page_type": "WebPage",
     "schema_types": [
       "WebPage",

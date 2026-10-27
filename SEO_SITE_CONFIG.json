@@ -1,5 +1,5 @@
 {
-  "canonical_origin": "https://dmc24.in",
+  "canonical_origin": "http://localhost:3000",
   "page_types": {
     "about": "AboutPage",
     "about-puratech": "AboutPage",

@@ -1,0 +1,34 @@
+{
+  "destinations": {
+    "bali": "Bali is known for beaches, temples, living cultural traditions, wellness retreats, private villas and outdoor experiences. DMC programmes often combine these with neighbouring island stays.",
+    "botswana": "Botswana is known for the Okavango Delta, Chobe wildlife experiences, the Makgadikgadi salt pans and Kalahari landscapes. Safari programmes often connect remote camps by air and road.",
+    "cambodia": "Cambodia is known for Angkor’s temples, Khmer heritage, Phnom Penh, rural experiences and southern coastal stays.",
+    "dubai": "The UAE is known for luxury hotels, Dubai and Abu Dhabi city experiences, desert safaris, cultural attractions, theme parks and international events.",
+    "egypt": "Egypt is known for ancient monuments, Nile journeys, Cairo’s cultural attractions and Red Sea resorts. Touring programmes often combine heritage visits with cruise or beach stays.",
+    "hong-kong": "Hong Kong is known for Victoria Harbour, its skyline, food, shopping and cultural neighbourhoods. DMC itineraries can also include regional extensions to Macau and the Greater Bay Area.",
+    "kenya": "Kenya is known for wildlife safaris, national parks and reserves, coastal stays and cultural experiences. Safari itineraries connect camps, lodges, park visits and ground or air transport.",
+    "malaysia": "Malaysia is known for its cities, cultural heritage, food, islands and nature experiences. DMC programmes combine city stays, guided touring and regional or island extensions.",
+    "maldives": "The Maldives is known for island resorts, beaches, marine experiences and honeymoon holidays. Resort programmes require coordinated accommodation offers and island transfers.",
+    "mauritius": "Mauritius is known for beach resorts, island excursions, cultural experiences, nature and water activities. DMC programmes often combine hotel stays with transfers and locally sold excursions.",
+    "namibia": "Namibia is known for the Namib Desert, Sossusvlei, Etosha wildlife experiences and the Atlantic coast. Touring programmes connect these landscapes through long-distance routes and lodge stays.",
+    "oman": "Oman is known for forts, souqs, desert landscapes, wadis, mountain villages and coastal experiences. Round tours combine these with hotels, camps, guides and road transport.",
+    "rwanda": "Rwanda is known for gorilla and primate trekking, Kigali, Lake Kivu and conservation-focused wildlife experiences. Touring programmes combine permits, accommodation and ground services.",
+    "saudi-arabia": "Saudi Arabia is known for religious destinations, heritage sites, AlUla, modern cities and Red Sea landscapes. Programmes can combine cultural touring, events and religious ground services.",
+    "seychelles": "Seychelles is known for beaches, granite islands, nature reserves, marine experiences and island resorts. Multi-island programmes connect stays on Mahé, Praslin and La Digue with air, sea and ground transfers.",
+    "singapore": "Singapore is known for its skyline, gardens, family attractions, food and multicultural neighbourhoods. It also supports business events, cruise stays and regional travel combinations.",
+    "south-africa": "South Africa is known for wildlife safaris, Cape Town, cultural experiences, winelands, coastlines and scenic touring routes. DMC programmes often combine cities, lodges and regional journeys.",
+    "sri-lanka": "Sri Lanka is known for cultural heritage, beaches, tea-country landscapes, wildlife, temples and wellness experiences. Touring programmes often link several regions within one itinerary.",
+    "tanzania": "Tanzania is known for Serengeti safaris, Ngorongoro, Kilimanjaro and Zanzibar. DMC programmes can combine wildlife circuits, mountain experiences and coastal stays.",
+    "thailand": "Thailand is known for temples, city experiences, food, northern cultural touring and island resorts. DMC programmes combine guided tours, transfers and mainland or island stays.",
+    "uganda": "Uganda is known for gorilla and chimpanzee trekking, wildlife safaris, Nile experiences and lake landscapes. Itineraries combine permit-led activities with accommodation and transport.",
+    "vietnam": "Vietnam is known for cultural cities, Ha Long Bay, regional cuisine, coastal stays and the Mekong Delta. Touring programmes often connect several regions through road and domestic-flight sectors.",
+    "zambia": "Zambia is known for wildlife safaris, Victoria Falls near Livingstone and Zambezi river experiences. Programmes connect lodge stays, parks, river activities and ground or air services.",
+    "zimbabwe": "Zimbabwe is known for Victoria Falls, Hwange and Mana Pools wildlife experiences, and Great Zimbabwe heritage. DMC programmes combine these with scenic and regional journeys."
+  },
+  "headings": {
+    "What Changes During Adoption?": "Adoption brings structured data, agreed workflows and role-based training into daily operations. As teams use the system consistently, booking status, supplier actions, costs and profitability become easier to review.",
+    "How Ready Is Your DMC?": "Readiness depends on an implementation owner, accessible supplier data, agreed workflows, training time and management support. Use the checklist below to identify gaps before starting a controlled pilot.",
+    "Need market-specific pricing?": "Each destination page shows its configured plans, user allowances, setup fees and billing options. Review the relevant country page or request a commercial discussion for a tailored scope.",
+    "How to Adopt DMC24?": "Prepare supplier and product data, agree departmental workflows, nominate an implementation owner and train teams by role. Start with a controlled pilot, then expand the rollout as the team becomes ready."
+  }
+}

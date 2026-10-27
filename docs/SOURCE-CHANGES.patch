@@ -1,0 +1,367 @@
+--- v171/server/admin-auth.mjs
++++ mysql/server/admin-auth.mjs
+@@ -18,7 +18,7 @@
+  const t=token(req),config=configuration(env);if(!t||!config)return null;
+  const hash=await digest(t),now=Date.now();
+  const row=await env.DB.prepare('SELECT actor,expires_at,last_seen,credential_version,user_id FROM admin_sessions WHERE token_hash=?').bind(hash).first();
+- if(!row||row.expires_at<=now||row.last_seen<=now-30*60000||row.actor!==(req.headers.get('oai-authenticated-user-id')||''))return null;
++ if(!row||row.expires_at<=now||row.last_seen<=now-30*60000)return null;
+  let account=null;if(row.user_id){account=await env.DB.prepare('SELECT id,name,email,status,permissions,revision FROM admin_users WHERE id=?').bind(row.user_id).first();if(!account||account.status!=='active'||row.credential_version!==String(account.revision))return null;}else if(row.credential_version!==config.hash)return null;
+  if(now-row.last_seen>60000)await env.DB.prepare('UPDATE admin_sessions SET last_seen=? WHERE token_hash=?').bind(now,hash).run();
+  return {id:account?.id||'admin',name:account?.name||'Admin',superAdmin:!account,permissions:account?JSON.parse(account.permissions):{},expiresAt:row.expires_at,idleExpiresAt:now+30*60000};
+@@ -38,9 +38,9 @@
+  const raw=await req.text();if(raw.length>1500)return json({error:'Request too large'},413);
+  let b;try{b=JSON.parse(raw)}catch{return json({error:'Invalid request'},400)}
+  if(!b||typeof b.username!=='string'||typeof b.password!=='string'||b.password.length>256||b.username.length>100)return json({error:'Enter your username and password.'},400);
+- const now=Date.now(),bucket=await digest(config.salt+'|'+(req.headers.get('CF-Connecting-IP')||req.headers.get('oai-authenticated-user-id')||'unknown'));
++ const now=Date.now(),bucket=await digest(config.salt+'|'+(req.headers.get('x-dmc24-client-ip')||'unknown'));
+  // Atomic reservation stops concurrent guesses from bypassing the limit.
+- await env.DB.prepare('INSERT INTO admin_login_limits (bucket,attempts,reset_at) VALUES (?,1,?) ON CONFLICT(bucket) DO UPDATE SET attempts=CASE WHEN reset_at<=? THEN 1 ELSE attempts+1 END,reset_at=CASE WHEN reset_at<=? THEN ? ELSE reset_at END').bind(bucket,now+15*60000,now,now,now+15*60000).run();
++ await env.DB.prepare('INSERT INTO admin_login_limits (bucket,attempts,reset_at) VALUES (?,1,?) ON DUPLICATE KEY UPDATE attempts=CASE WHEN reset_at<=? THEN 1 ELSE attempts+1 END,reset_at=CASE WHEN reset_at<=? THEN ? ELSE reset_at END').bind(bucket,now+15*60000,now,now,now+15*60000).run();
+  const limit=await env.DB.prepare('SELECT attempts,reset_at FROM admin_login_limits WHERE bucket=?').bind(bucket).first();
+  if(limit.attempts>5)return json({error:'Too many login attempts. Please try again in 15 minutes.'},429,{'Retry-After':String(Math.max(1,Math.ceil((limit.reset_at-now)/1000)))});
+  const account=b.username==='Admin'?null:await env.DB.prepare('SELECT * FROM admin_users WHERE email=?').bind(b.username.trim().toLowerCase()).first();
+@@ -52,7 +52,7 @@
+  await env.DB.prepare('DELETE FROM admin_login_limits WHERE bucket=?').bind(bucket).run();
+  const previous=token(req);if(previous)await env.DB.prepare('DELETE FROM admin_sessions WHERE token_hash=?').bind(await digest(previous)).run();
+  const next=hex(crypto.getRandomValues(new Uint8Array(32))),expiresAt=now+8*3600000;
+- await env.DB.prepare('INSERT INTO admin_sessions (token_hash,actor,expires_at,last_seen,credential_version,user_id) VALUES (?,?,?,?,?,?)').bind(await digest(next),req.headers.get('oai-authenticated-user-id')||'',expiresAt,now,account?String(account.revision):config.hash,account?.id||null).run();
++ await env.DB.prepare('INSERT INTO admin_sessions (token_hash,actor,expires_at,last_seen,credential_version,user_id) VALUES (?,?,?,?,?,?)').bind(await digest(next),'standalone',expiresAt,now,account?String(account.revision):config.hash,account?.id||null).run();
+  await audit(env,account?.id||'admin','Signed in',account?.id||'admin');
+  await env.DB.prepare('DELETE FROM admin_sessions WHERE expires_at<?').bind(now).run();
+  await env.DB.prepare('DELETE FROM admin_login_limits WHERE reset_at<?').bind(now).run();
+--- v171/server/analytics.mjs
++++ mysql/server/analytics.mjs
+@@ -24,9 +24,9 @@
+   const count=await env.DB.prepare('SELECT COUNT(*) AS n FROM analytics_events WHERE session=? AND occurred_at>?').bind(b.session,new Date(Date.now()-3600000).toISOString()).first();if(count.n>=300)return new Response(null,{status:204});
+   const region=req.cf?.country||req.headers.get('CF-IPCountry')||'ZZ',country=/^[A-Z]{2}$/.test(region)&&!['XX','T1'].includes(region)?region:'ZZ';
+   const target=typeof b.target==='string'&&/^[a-z0-9-]{1,64}$/.test(b.target)?b.target:'';
+-  await env.DB.prepare('INSERT OR IGNORE INTO analytics_events (id,visitor,session,kind,path,product,target,country,source,device,[returning],occurred_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)').bind(b.id,b.visitor,b.session,b.kind,b.path,product(b.path),target,country,b.source,b.device,b.returning?1:0,new Date().toISOString()).run();
++  await env.DB.prepareIgnore('INSERT INTO analytics_events (id,visitor,session,kind,path,product,target,country,source,device,`returning`,occurred_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)').bind(b.id,b.visitor,b.session,b.kind,b.path,product(b.path),target,country,b.source,b.device,b.returning?1:0,new Date().toISOString()).run();
+   // Bounded housekeeping on a small fraction of incoming events; no raw IPs are stored.
+-  if(crypto.getRandomValues(new Uint8Array(1))[0]<5)await env.DB.prepare('DELETE FROM analytics_events WHERE id IN (SELECT id FROM analytics_events WHERE occurred_at<? LIMIT 500)').bind(new Date(Date.now()-180*86400000).toISOString()).run();
++  if(crypto.getRandomValues(new Uint8Array(1))[0]<5)await env.DB.prepare('DELETE FROM analytics_events WHERE occurred_at<? ORDER BY occurred_at LIMIT 500').bind(new Date(Date.now()-180*86400000).toISOString()).run();
+   return new Response(null,{status:204,headers:{'Cache-Control':'no-store'}});
+  }
+  if(!owner)return json({error:'Only the site owner can view analytics.'},403);
+@@ -41,16 +41,16 @@
+  }
+  if(mode==='events'){
+   const offset=Math.max(0,Math.min(1000000,parseInt(url.searchParams.get('offset'))||0));
+-  const rows=await all('SELECT occurred_at,session,kind,path,product,target,country,source,device,[returning] FROM analytics_events WHERE '+f.where+' ORDER BY occurred_at,id LIMIT 200 OFFSET ?',[...f.params,offset]);return json({rows});
++  const rows=await all('SELECT occurred_at,session,kind,path,product,target,country,source,device,`returning` FROM analytics_events WHERE '+f.where+' ORDER BY occurred_at,id LIMIT 200 OFFSET ?',[...f.params,offset]);return json({rows});
+  }
+  if(mode!=='summary')return json({error:'Invalid report'},400);
+  const aggregate="COUNT(CASE WHEN kind='pageview' THEN 1 END) AS views,COUNT(DISTINCT visitor) AS visitors,COUNT(DISTINCT session) AS visits,COUNT(CASE WHEN kind='brochure' THEN 1 END) AS brochures,COUNT(CASE WHEN kind='demo' THEN 1 END) AS demos";
+- const summary=(await all('SELECT '+aggregate+",COUNT(DISTINCT CASE WHEN [returning]=0 THEN session END) AS newVisits,COUNT(DISTINCT CASE WHEN [returning]=1 THEN session END) AS returningVisits,COUNT(DISTINCT CASE WHEN kind='brochure' THEN session END) AS convertedVisits FROM analytics_events WHERE "+f.where))[0];
++ const summary=(await all('SELECT '+aggregate+",COUNT(DISTINCT CASE WHEN `returning`=0 THEN session END) AS newVisits,COUNT(DISTINCT CASE WHEN `returning`=1 THEN session END) AS returningVisits,COUNT(DISTINCT CASE WHEN kind='brochure' THEN session END) AS convertedVisits FROM analytics_events WHERE "+f.where))[0];
+  const groups=async field=>all('SELECT '+field+' AS label,'+aggregate+' FROM analytics_events WHERE '+f.where+' GROUP BY '+field+' ORDER BY views DESC,visits DESC,label LIMIT 100');
+  const [countries,pages,sources,devices,daily,visits,options]=await Promise.all([
+   groups('country'),groups('path'),groups('source'),groups('device'),
+-  all("SELECT date(occurred_at,'+5 hours','+30 minutes') AS day,COUNT(*) AS views FROM analytics_events WHERE "+f.where+" AND kind='pageview' GROUP BY day ORDER BY day"),
+-  all('SELECT session,MIN(occurred_at) AS started,MAX(occurred_at) AS last,MIN(country) AS country,MIN(source) AS source,MIN(device) AS device,MAX([returning]) AS [returning],'+aggregate+' FROM analytics_events WHERE '+f.where+' GROUP BY session ORDER BY last DESC LIMIT 50'),
++  all("SELECT DATE(DATE_ADD(STR_TO_DATE(occurred_at, '%Y-%m-%dT%H:%i:%s.%fZ'), INTERVAL 330 MINUTE)) AS day,COUNT(*) AS views FROM analytics_events WHERE "+f.where+" AND kind='pageview' GROUP BY day ORDER BY day"),
++  all('SELECT session,MIN(occurred_at) AS started,MAX(occurred_at) AS last,MIN(country) AS country,MIN(source) AS source,MIN(device) AS device,MAX(`returning`) AS `returning`,'+aggregate+' FROM analytics_events WHERE '+f.where+' GROUP BY session ORDER BY last DESC LIMIT 50'),
+   all('SELECT DISTINCT country FROM analytics_events ORDER BY country',[])
+  ]);
+  return json({summary,countries,pages,sources,devices,daily,visits,from:f.from,to:f.to,options:{countries:options.map(r=>r.country),pages:Object.keys(htmlFiles).map(s=>s==='index'?'/':'/'+s).filter(publicPage).sort(),products}});
+--- v171/server/blog-ordering.mjs
++++ mysql/server/blog-ordering.mjs
+@@ -15,7 +15,7 @@
+  const previous=await readBlogOrder(env);if(previous.revision!==b.revision)return json({error:'Display order changed in another session. Reload ordering before saving.'},409);const publishing=path.endsWith('/publish');let settings;try{settings=validate(publishing?previous.draft:b.settings,rows,categories);}catch(e){return json({error:e.message},400)}if(publishing&&!previous.revision)return json({error:'Save an ordering draft first.'},400);
+  const stamp=new Date().toISOString();let result;
+  if(publishing)result=await env.DB.prepare("UPDATE blog_ordering SET published=?,published_revision=revision+1,revision=revision+1,published_at=?,updated_at=? WHERE id='main' AND revision=?").bind(JSON.stringify(settings),stamp,stamp,b.revision).run();
+- else if(!b.revision)result=await env.DB.prepare("INSERT INTO blog_ordering(id,draft,revision,updated_at) VALUES('main',?,1,?) ON CONFLICT(id) DO NOTHING").bind(JSON.stringify(settings),stamp).run();
++ else if(!b.revision)result=await env.DB.prepareIgnore("INSERT INTO blog_ordering(id,draft,revision,updated_at) VALUES('main',?,1,?)").bind(JSON.stringify(settings),stamp).run();
+  else result=await env.DB.prepare("UPDATE blog_ordering SET draft=?,revision=revision+1,updated_at=? WHERE id='main' AND revision=?").bind(JSON.stringify(settings),stamp,b.revision).run();
+  if(result.meta.changes!==1)return json({error:'Display order changed in another session. Reload ordering before saving.'},409);return json(await readBlogOrder(env));
+ }
+--- v171/server/blogs.mjs
++++ mysql/server/blogs.mjs
+@@ -29,7 +29,7 @@
+ }
+ async function initAuthorBlogs(env){
+  if(!await env.DB.prepare("SELECT id FROM blog_state WHERE id='seed-v1'").first()){
+-  const now=new Date().toISOString();await env.DB.batch([...seeds.map(p=>env.DB.prepare("INSERT INTO blog_posts(id,slug,draft,published,revision,published_revision,state,updated_at,published_at) VALUES(?,?,?,?,1,1,'published',?,?) ON CONFLICT(id) DO NOTHING").bind(p.id,p.slug,JSON.stringify(p),JSON.stringify(p),now,now)),env.DB.prepare("INSERT INTO blog_state(id) VALUES('seed-v1') ON CONFLICT(id) DO NOTHING")]);
++  const now=new Date().toISOString();await env.DB.batch([...seeds.map(p=>env.DB.prepareIgnore("INSERT INTO blog_posts(id,slug,draft,published,revision,published_revision,state,updated_at,published_at) VALUES(?,?,?,?,1,1,'published',?,?)").bind(p.id,p.slug,JSON.stringify(p),JSON.stringify(p),now,now)),env.DB.prepareIgnore("INSERT INTO blog_state(id) VALUES('seed-v1')")]);
+  }
+  if(await env.DB.prepare("SELECT id FROM blog_state WHERE id='author-editorial-v1'").first())return;
+  const rows=(await env.DB.prepare('SELECT * FROM blog_posts').all()).results;
+@@ -40,7 +40,7 @@
+   // Another request may have upgraded a row first. Retry on the next request.
+   if(results.some(r=>r.meta.changes!==1))return;
+  }
+- await env.DB.prepare("INSERT INTO blog_state(id) VALUES('author-editorial-v1') ON CONFLICT(id) DO NOTHING").run();
++ await env.DB.prepareIgnore("INSERT INTO blog_state(id) VALUES('author-editorial-v1')").run();
+ }
+ export async function initBlogs(env){
+  await initAuthorBlogs(env);
+@@ -49,7 +49,7 @@
+  const pending=rows.filter(r=>dates[r.slug]&&(!JSON.parse(r.draft).publishedDate||(r.published&&!JSON.parse(r.published).publishedDate)));
+  const fill=(raw,slug)=>{const p=JSON.parse(raw);return JSON.stringify({...p,publishedDate:p.publishedDate||dates[slug].publishedDate});};
+  if(pending.length){const results=await env.DB.batch(pending.map(r=>env.DB.prepare('UPDATE blog_posts SET draft=?,published=?,revision=revision+1,published_revision=published_revision+? WHERE id=? AND revision=?').bind(fill(r.draft,r.slug),r.published?fill(r.published,r.slug):null,r.published?1:0,r.id,r.revision)));if(results.some(r=>r.meta.changes!==1))return;}
+- await env.DB.prepare("INSERT INTO blog_state(id) VALUES('publication-dates-v1') ON CONFLICT(id) DO NOTHING").run();
++ await env.DB.prepareIgnore("INSERT INTO blog_state(id) VALUES('publication-dates-v1')").run();
+ }
+ function isVishal(p){return p.author===profile.author&&p.authorUrl?.replace(/\/$/,'')===profile.authorUrl.replace(/\/$/,'');}
+ function authorSchema(p){return {'@type':p.author==='DMC24 Editorial Team'?'Organization':'Person',...(isVishal(p)?{'@id':siteOrigin+'/vishal-shah#person',url:siteOrigin+'/vishal-shah'}:{}),name:p.author,...(p.authorBio?{description:p.authorBio}:{}),...(p.authorUrl&&safeAuthorUrl(p.authorUrl)?{...(isVishal(p)?{}:{url:p.authorUrl}),sameAs:[p.authorUrl]}:{})};}
+@@ -74,7 +74,7 @@
+   if(htmlFiles[p.slug]&&!(row&&seedSlugs.has(row.slug)))return json({error:'This URL belongs to an existing website page.'},409);
+   const duplicate=await db.prepare('SELECT id FROM blog_posts WHERE slug=? AND id<>?').bind(p.slug,id).first();if(duplicate)return json({error:'This URL is already used by another article.'},409);
+   if(p.image&&!await db.prepare('SELECT id FROM blog_media WHERE id=?').bind(p.image.split('/').pop()).first())return json({error:'Upload the image again before saving.'},400);
+-  try{result=row?await db.prepare("UPDATE blog_posts SET draft=?,revision=revision+1,updated_at=? WHERE id=? AND revision=?").bind(JSON.stringify(p),now,id,b.revision).run():await db.prepare("INSERT INTO blog_posts(id,slug,draft,revision,state,updated_at) VALUES(?,?,?,1,'draft',?) ON CONFLICT DO NOTHING").bind(id,p.slug,JSON.stringify(p),now).run();}catch{return json({error:'Could not save. The URL may have been taken; reload and retry.'},409)}
++  try{result=row?await db.prepare("UPDATE blog_posts SET draft=?,revision=revision+1,updated_at=? WHERE id=? AND revision=?").bind(JSON.stringify(p),now,id,b.revision).run():await db.prepareIgnore("INSERT INTO blog_posts(id,slug,draft,revision,state,updated_at) VALUES(?,?,?,1,'draft',?)").bind(id,p.slug,JSON.stringify(p),now).run();}catch{return json({error:'Could not save. The URL may have been taken; reload and retry.'},409)}
+  }else{
+   if(!row)return json({error:'Save your article before publishing.'},400);
+   if(action==='publish'){let p;try{p=validate(JSON.parse(row.draft),true);}catch(e){return json({error:e.message},400)}if(!p.publishedDate)p.publishedDate=now.slice(0,10);p.modifiedAt=now;result=await db.prepare("UPDATE blog_posts SET draft=?,published=?,published_revision=revision+1,revision=revision+1,state='published',published_at=COALESCE(published_at,?),updated_at=? WHERE id=? AND revision=?").bind(JSON.stringify(p),JSON.stringify(p),now,now,id,b.revision).run();}
+@@ -83,7 +83,7 @@
+  if(result.meta.changes!==1)return json({error:'This article changed. Reload before continuing.'},409);return json({article:view(await db.prepare('SELECT * FROM blog_posts WHERE id=?').bind(id).first())});
+ }
+ export async function uploadBlogImage(req,env){if(req.method!=='POST')return json({error:'Method not allowed'},405);if(req.headers.get('Origin')!==new URL(req.url).origin)return json({error:'Request not allowed'},403);const mime=req.headers.get('Content-Type');if(!['image/png','image/jpeg','image/webp'].includes(mime))return json({error:'Use a JPG, PNG or WebP image.'},400);if(Number(req.headers.get('Content-Length'))>2*1024*1024)return json({error:'Maximum image size is 2 MB.'},413);const data=await req.arrayBuffer();if(!data.byteLength||data.byteLength>2*1024*1024)return json({error:'Maximum image size is 2 MB.'},413);const a=new Uint8Array(data),str=(i,n)=>String.fromCharCode(...a.slice(i,i+n));if(!(mime==='image/png'&&a[0]===137&&str(1,3)==='PNG'||mime==='image/jpeg'&&a[0]===255&&a[1]===216&&a[2]===255||mime==='image/webp'&&str(0,4)==='RIFF'&&str(8,4)==='WEBP'))return json({error:'The file does not match its image type.'},400);const id=crypto.randomUUID();await env.BUCKET.put('blog-media/'+id,data,{httpMetadata:{contentType:mime}});await env.DB.prepare('INSERT INTO blog_media(id,mime,created_at) VALUES(?,?,?)').bind(id,mime,new Date().toISOString()).run();return json({url:'/api/blog-media/'+id});}
+-export async function blogImage(req,env,id){if(!['GET','HEAD'].includes(req.method)||!/^[a-f0-9-]{36}$/.test(id))return new Response('Not found',{status:404});const pub=await env.DB.prepare("SELECT id FROM blog_posts WHERE published IS NOT NULL AND json_extract(published,'$.image')=? LIMIT 1").bind('/api/blog-media/'+id).first();if(!pub&&!can(await adminSession(req,env),'blogs'))return new Response('Not found',{status:404});const obj=await env.BUCKET.get('blog-media/'+id);if(!obj)return new Response('Not found',{status:404});return new Response(req.method==='HEAD'?null:obj.body,{headers:{'Content-Type':obj.httpMetadata?.contentType||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});}
++export async function blogImage(req,env,id){if(!['GET','HEAD'].includes(req.method)||!/^[a-f0-9-]{36}$/.test(id))return new Response('Not found',{status:404});const pub=await env.DB.prepare("SELECT id FROM blog_posts WHERE published IS NOT NULL AND JSON_UNQUOTE(JSON_EXTRACT(published,'$.image'))=? LIMIT 1").bind('/api/blog-media/'+id).first();if(!pub&&!can(await adminSession(req,env),'blogs'))return new Response('Not found',{status:404});const obj=await env.BUCKET.get('blog-media/'+id);if(!obj)return new Response('Not found',{status:404});return new Response(req.method==='HEAD'?null:obj.body,{headers:{'Content-Type':obj.httpMetadata?.contentType||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});}
+ function metadata(html,p,row){const canonical=siteOrigin+'/'+row.slug;const schema={'@context':'https://schema.org','@graph':[{'@type':'BlogPosting','headline':p.title,'description':p.description,'url':canonical,'mainEntityOfPage':canonical,'author':authorSchema(p),'publisher':{'@type':'Organization','@id':siteOrigin+'/#organization','name':'Puratech','url':siteOrigin+'/about-puratech'},...(p.publishedDate?{datePublished:p.publishedDate}:{}),...(p.modifiedAt?{dateModified:p.modifiedAt}:{}),...(p.image?{image:siteOrigin+p.image}:{})},{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:siteOrigin+'/'},{'@type':'ListItem',position:2,name:'Blogs & Insights',item:siteOrigin+'/blogs'},{'@type':'ListItem',position:3,name:p.title,item:canonical}]}]};return html.replace(/<head>([\s\S]*?)<\/head>/,(_,head)=>'<head>'+head.replace(/<title>[\s\S]*?<\/title>/,'').replace(/<meta\b[^>]*(?:name="(?:description|robots|twitter:[^"]*)"|property="og:[^"]*")[^>]*>/gi,'').replace(/<link[^>]*rel="canonical"[^>]*>/g,'').replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g,'')+'<title>'+esc(p.seoTitle)+'</title><meta name="description" content="'+esc(p.description)+'"><link rel="canonical" href="'+canonical+'"><meta property="og:type" content="article"><meta property="og:title" content="'+esc(p.ogTitle||p.seoTitle)+'"><meta property="og:description" content="'+esc(p.ogDescription||p.description)+'"><meta property="og:url" content="'+canonical+'">'+(p.image?'<meta property="og:image" content="'+siteOrigin+p.image+'"><meta property="og:image:alt" content="'+esc(p.alt)+'">':'')+'<script type="application/ld+json">'+JSON.stringify(schema).replaceAll('<','\\u003c')+'</script></head>');}
+ export function renderBlog(row){const p=JSON.parse(row.published),template=htmlFiles[row.slug]||htmlFiles['international-market-control'];let html=template.replace(/data-page="[^"]*"/g,'data-page="cms-article"');html=html.replace(/<nav class="site-breadcrumbs"[\s\S]*?<\/nav>/g,'');const crumbs='<nav class="site-breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/blogs">Blogs &amp; Insights</a></li><li><span aria-current="page">'+esc(p.title)+'</span></li></ol></div></nav>';
+  const related=(p.related||'').split('\n').filter(Boolean).map(path=>'<p><a href="'+esc(path)+'">'+esc(path.slice(1).replaceAll('-',' '))+'</a></p>').join('');
+--- v171/server/brochure-access.mjs
++++ mysql/server/brochure-access.mjs
+@@ -54,7 +54,7 @@
+   const offset=Math.max(0,Math.min(1000000,parseInt(url.searchParams.get('offset'))||0));
+   const sort=url.searchParams.get('sort')||'requested',direction=url.searchParams.get('direction')||'desc';
+   if(!['requested','destination'].includes(sort)||!['asc','desc'].includes(direction))return json({error:'Invalid sort option'},400);
+-  const order=sort==='destination'?"(d.destination='') ASC,d.destination COLLATE NOCASE "+direction.toUpperCase()+',d.created_at DESC,d.id DESC':'d.created_at '+direction.toUpperCase()+',d.id '+direction.toUpperCase();
++  const order=sort==='destination'?"(d.destination='') ASC,d.destination COLLATE utf8mb4_unicode_ci "+direction.toUpperCase()+',d.created_at DESC,d.id DESC':'d.created_at '+direction.toUpperCase()+',d.id '+direction.toUpperCase();
+   const rows=(await env.DB.prepare('SELECT d.id,d.created_at,l.name,l.email,l.company,l.countries,l.users,l.timing,l.phone,l.demo,d.title,d.destination,d.source FROM brochure_downloads d JOIN brochure_leads l ON l.id=d.lead_id ORDER BY '+order+' LIMIT 100 OFFSET ?').bind(offset).all()).results;
+   const count=await env.DB.prepare('SELECT COUNT(*) AS total FROM brochure_downloads').first();
+   return json({rows,total:count.total,offset});
+--- v171/server/demo-requests.mjs
++++ mysql/server/demo-requests.mjs
+@@ -39,7 +39,7 @@
+   const existing=await env.DB.prepare('SELECT id FROM demo_requests WHERE id=?').bind(r.id).first();if(existing)return json({ok:true,id:r.id});
+   const recent=await env.DB.prepare('SELECT COUNT(*) n FROM demo_requests WHERE email=? AND created_at>?').bind(r.email.toLowerCase(),new Date(Date.now()-3600000).toISOString()).first();if(recent.n>=5)return json({error:'You have submitted several requests. Please try again later.'},429);
+   r.email=r.email.toLowerCase();const now=new Date().toISOString(),keys=Object.keys(r);
+-  await env.DB.prepare('INSERT INTO demo_requests ('+keys.join(',')+',created_at,consent_at) VALUES ('+keys.map(()=>'?').join(',')+',?,?) ON CONFLICT(id) DO NOTHING').bind(...Object.values(r),now,now).run();
++  await env.DB.prepareIgnore('INSERT INTO demo_requests ('+keys.join(',')+',created_at,consent_at) VALUES ('+keys.map(()=>'?').join(',')+',?,?)').bind(...Object.values(r),now,now).run();
+   await captureEmail(env,{...r,trigger:r.destination?'country':r.source==='/contact'?'enquiry':'demo',solutions:JSON.parse(r.solutions),product:JSON.parse(r.solutions).filter(x=>x!=='Help me choose').join(', ')||'DMC24'},'demo:'+r.id,ctx);return json({ok:true,id:r.id},201);
+  }
+  if(path==='/api/admin/demo-requests'&&req.method==='GET'){
+--- v171/server/destinations.mjs
++++ mysql/server/destinations.mjs
+@@ -18,7 +18,7 @@
+   const slug=match[1];if(!catalog[slug])return json({error:'Destination not found'},404);
+   const body=await req.json();if(typeof body.visible!=='boolean'||!Number.isInteger(body.revision)||body.revision<0)return json({error:'Invalid visibility setting'},400);
+   const stamp=new Date().toISOString();let result;
+-  if(body.revision===0)result=await env.DB.prepare('INSERT INTO destination_visibility (slug,visible,revision,updated_by,updated_at) VALUES (?,?,1,?,?) ON CONFLICT(slug) DO NOTHING').bind(slug,Number(body.visible),owner,stamp).run();
++  if(body.revision===0)result=await env.DB.prepareIgnore('INSERT INTO destination_visibility (slug,visible,revision,updated_by,updated_at) VALUES (?,?,1,?,?)').bind(slug,Number(body.visible),owner,stamp).run();
+   else result=await env.DB.prepare('UPDATE destination_visibility SET visible=?,revision=revision+1,updated_by=?,updated_at=? WHERE slug=? AND revision=?').bind(Number(body.visible),owner,stamp,slug,body.revision).run();
+   if(result.meta.changes!==1)return json({error:'Visibility changed in another session. Reload the manager and try again.'},409);
+   return json({ok:true,visible:body.visible,revision:body.revision+1});
+@@ -31,14 +31,7 @@
+   const sourcePlans=withLimits(JSON.parse(source.draft));const rows=await env.DB.prepare('SELECT slug,draft,setup_draft FROM country_pricing').all();const existing=Object.fromEntries(rows.results.map(r=>[r.slug,withLimits(JSON.parse(r.draft))]));
+   const sourceSetup=source.setup_draft?JSON.parse(source.setup_draft):catalog[body.source].setupFees;const existingSetup=Object.fromEntries(rows.results.map(r=>[r.slug,r.setup_draft?JSON.parse(r.setup_draft):catalog[r.slug]?.setupFees]));
+   const entries=[];try{for(const t of body.targets){const previous=existing[t.slug]||withLimits(catalog[t.slug].plans);const plans=sourcePlans.map((p,i)=>p.enabled&&catalog[t.slug].plans[i].enabled?{...p,enabled:true}:previous[i]);const priorSetup=existingSetup[t.slug]||catalog[t.slug].setupFees;const setup=body.copySetup?sourceSetup.map((p,i)=>p.enabled&&catalog[t.slug].setupFees[i].enabled?{...p,enabled:true,visible:priorSetup[i].visible!==false,priceVisible:priorSetup[i].priceVisible!==false}:priorSetup[i]):priorSetup;entries.push({slug:t.slug,expected:t.revision,draft:JSON.stringify(validate(plans,catalog[t.slug].plans)),setup:JSON.stringify(validateSetup(setup,catalog[t.slug].setupFees))});}}catch(e){return json({error:e.message},400)}
+-  const now=new Date().toISOString(),packed=JSON.stringify(entries);
+-  // One statement: either every expected revision matches or no target is updated.
+-  const result=await env.DB.prepare(`INSERT INTO country_pricing (slug,draft,published,setup_draft,setup_published,revision,published_revision,updated_by,updated_at,published_at)
+- SELECT json_extract(item.value,'$.slug'),json_extract(item.value,'$.draft'),CASE WHEN ?=1 THEN json_extract(item.value,'$.draft') ELSE NULL END,json_extract(item.value,'$.setup'),CASE WHEN ?=1 THEN json_extract(item.value,'$.setup') ELSE NULL END,1,CASE WHEN ?=1 THEN 1 ELSE 0 END,?,?,CASE WHEN ?=1 THEN ? ELSE NULL END
+- FROM json_each(?) item
+- WHERE NOT EXISTS (SELECT 1 FROM json_each(?) check_item LEFT JOIN country_pricing old ON old.slug=json_extract(check_item.value,'$.slug') WHERE COALESCE(old.revision,0)<>json_extract(check_item.value,'$.expected'))
+- AND EXISTS (SELECT 1 FROM country_pricing WHERE slug=? AND revision=?)
+- ON CONFLICT(slug) DO UPDATE SET draft=excluded.draft,setup_draft=excluded.setup_draft,setup_published=CASE WHEN ?=1 THEN excluded.setup_draft ELSE country_pricing.setup_published END,revision=country_pricing.revision+1,published=CASE WHEN ?=1 THEN excluded.draft ELSE country_pricing.published END,published_revision=CASE WHEN ?=1 THEN country_pricing.revision+1 ELSE country_pricing.published_revision END,published_at=CASE WHEN ?=1 THEN excluded.published_at ELSE country_pricing.published_at END,updated_by=excluded.updated_by,updated_at=excluded.updated_at`).bind(Number(body.publish),Number(body.publish),Number(body.publish),owner,now,Number(body.publish),now,packed,packed,body.source,body.sourceRevision,Number(body.publish),Number(body.publish),Number(body.publish),Number(body.publish)).run();
++  const result=await env.DB.copyPricing({source:body.source,sourceRevision:body.sourceRevision,entries,publish:body.publish,owner,now:new Date().toISOString()});
+   if(result.meta.changes!==entries.length)return json({error:'A source or target draft changed in another session. Nothing was copied. Reload the selection and retry.'},409);
+   return json({ok:true,count:entries.length,published:body.publish});
+  }
+--- v171/server/email-automation.mjs
++++ mysql/server/email-automation.mjs
+@@ -42,7 +42,7 @@
+ }
+ export async function brochureLink(env,id){const payload=btoa(JSON.stringify({id,expires:Date.now()+7*86400000})).replaceAll('+','-').replaceAll('/','_').replaceAll('=','');const key=await crypto.subtle.importKey('raw',keyBytes(env),{name:'HMAC',hash:'SHA-256'},false,['sign']);const sig=hex(await crypto.subtle.sign('HMAC',key,bytes(payload)));return siteOrigin+'/api/email-brochure?token='+payload+'.'+sig;}
+ export async function verifyBrochureToken(token,env){try{if(typeof token!=='string'||token.length>1000)return null;const [payload,sig]=token.split('.');if(!/^[a-f0-9]{64}$/.test(sig))return null;const key=await crypto.subtle.importKey('raw',keyBytes(env),{name:'HMAC',hash:'SHA-256'},false,['verify']);if(!await crypto.subtle.verify('HMAC',key,new Uint8Array(sig.match(/../g).map(n=>parseInt(n,16))),bytes(payload)))return null;const value=JSON.parse(atob(payload.replaceAll('-','+').replaceAll('_','/')));return /^[a-z-]+$/.test(value.id)&&value.expires>Date.now()&&value.expires<=Date.now()+7*86400000?value.id:null;}catch{return null;}}
+-async function record(env,event,key,status){const rendered=renderEmail((await emailSettings(env)).config,event),id=crypto.randomUUID(),now=stamp();await env.DB.prepare('INSERT INTO email_outbox(id,event_key,recipient,trigger,destination,subject,html,status,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?) ON CONFLICT(event_key) DO NOTHING').bind(id,key,event.email.toLowerCase(),event.trigger,event.destination||'',rendered.subject,rendered.html,status,now,now).run();return (await env.DB.prepare('SELECT id FROM email_outbox WHERE event_key=?').bind(key).first()).id;}
++async function record(env,event,key,status){const rendered=renderEmail((await emailSettings(env)).config,event),id=crypto.randomUUID(),now=stamp();await env.DB.prepareIgnore('INSERT INTO email_outbox(id,event_key,recipient,`trigger`,destination,subject,html,status,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?)').bind(id,key,event.email.toLowerCase(),event.trigger,event.destination||'',rendered.subject,rendered.html,status,now,now).run();return (await env.DB.prepare('SELECT id FROM email_outbox WHERE event_key=?').bind(key).first()).id;}
+ export async function captureEmail(env,event,key,ctx){
+  try{const s=await emailSettings(env);const enabled=s.config.enabled&&s.config.templates[event.trigger]?.enabled&&s.tested===await fingerprint(s.config,s.secret);if(enabled&&event.brochure)event.brochureUrl=await brochureLink(env,event.brochure);const id=await record(env,event,key,enabled?'queued':'disabled');if(enabled){const task=sendQueued(env,id).catch(()=>{});if(ctx?.waitUntil)ctx.waitUntil(task);else await task;}}
+  catch{console.error('Email acknowledgement could not be queued; enquiry remains saved.');}
+@@ -63,7 +63,7 @@
+ }
+ export async function emailAdmin(req,env){
+  const url=new URL(req.url),action=url.pathname.slice('/api/admin/email/'.length);if(req.method==='GET'&&action==='settings'){const s=await emailSettings(env);return json({config:s.config,revision:s.revision,hasSecret:!!s.secret,keyReady:!!env.EMAIL_ENCRYPTION_KEY,tested:!!s.secret&&s.tested===await fingerprint(s.config,s.secret),countries:emailCountries,tokens});}
+- if(req.method==='GET'&&action==='logs'){await env.DB.prepare("UPDATE email_outbox SET status='unknown',detail='Sending was interrupted. Check Microsoft Sent Items before taking further action.',updated_at=? WHERE status='sending' AND updated_at<?").bind(stamp(),new Date(Date.now()-5*60000).toISOString()).run();const offset=Math.max(0,Math.min(100000,Number(url.searchParams.get('offset'))||0));const r=await env.DB.prepare('SELECT id,recipient,trigger,destination,subject,status,attempts,detail,created_at FROM email_outbox ORDER BY created_at DESC LIMIT 50 OFFSET ?').bind(offset).all();return json({rows:r.results});}
++ if(req.method==='GET'&&action==='logs'){await env.DB.prepare("UPDATE email_outbox SET status='unknown',detail='Sending was interrupted. Check Microsoft Sent Items before taking further action.',updated_at=? WHERE status='sending' AND updated_at<?").bind(stamp(),new Date(Date.now()-5*60000).toISOString()).run();const offset=Math.max(0,Math.min(100000,Number(url.searchParams.get('offset'))||0));const r=await env.DB.prepare('SELECT id,recipient,`trigger`,destination,subject,status,attempts,detail,created_at FROM email_outbox ORDER BY created_at DESC LIMIT 50 OFFSET ?').bind(offset).all();return json({rows:r.results});}
+  if(req.method!=='POST')return json({error:'Method not allowed'},405);
+  if(req.headers.get('Origin')!==url.origin||!req.headers.get('Content-Type')?.startsWith('application/json'))return json({error:'Request not allowed'},403);
+  const raw=await req.text();if(raw.length>100000)return json({error:'Request too large'},413);let b;try{b=JSON.parse(raw);}catch{return json({error:'Invalid request'},400);}
+@@ -72,7 +72,7 @@
+  let secret=s.secret;if(b.clearSecret)secret=null;if(b.secret){if(typeof b.secret!=='string'||b.secret.length>2000)return json({error:'Invalid client secret'},400);secret=await encrypt(b.secret,env);}
+  const tested=secret&&s.tested===await fingerprint(c,secret);if(c.enabled&&(!tested||!c.sender||!c.tenantId||!c.clientId))return json({error:'Save connection settings and send a successful test email before enabling automatic responses.'},400);
+  const values=[JSON.stringify(c),secret,tested?s.tested:null,stamp()];let result;
+- if(!s.revision)result=await env.DB.prepare("INSERT INTO email_settings(id,value,secret,tested,updated_at) VALUES('main',?,?,?,?) ON CONFLICT(id) DO NOTHING").bind(...values).run();else result=await env.DB.prepare("UPDATE email_settings SET value=?,secret=?,tested=?,updated_at=?,revision=revision+1 WHERE id='main' AND revision=?").bind(...values,s.revision).run();
++ if(!s.revision)result=await env.DB.prepareIgnore("INSERT INTO email_settings(id,value,secret,tested,updated_at) VALUES('main',?,?,?,?)").bind(...values).run();else result=await env.DB.prepare("UPDATE email_settings SET value=?,secret=?,tested=?,updated_at=?,revision=revision+1 WHERE id='main' AND revision=?").bind(...values,s.revision).run();
+  return result.meta.changes?json({ok:true,revision:s.revision+1}):json({error:'Settings changed. Reload before saving.'},409);
+  }
+  if(action==='preview'){
+@@ -80,7 +80,7 @@
+  }
+  if(action==='test'){
+  const s=await emailSettings(env);if(b.revision!==s.revision)return json({error:'Save or reload settings before testing.'},409);if(!email(b.recipient)||!s.secret||!s.config.tenantId||!s.config.clientId||!s.config.sender)return json({error:'Complete and save the connection settings and enter a test recipient.'},400);
+- const recent=await env.DB.prepare("SELECT COUNT(*) n FROM email_outbox WHERE trigger='test' AND created_at>?").bind(new Date(Date.now()-3600000).toISOString()).first();if(recent.n>=10)return json({error:'Test limit reached. Try again later.'},429);
++ const recent=await env.DB.prepare("SELECT COUNT(*) n FROM email_outbox WHERE `trigger`='test' AND created_at>?").bind(new Date(Date.now()-3600000).toISOString()).first();if(recent.n>=10)return json({error:'Test limit reached. Try again later.'},429);
+  const id=await record(env,{email:b.recipient,name:'DMC24 Administrator',company:'your team',trigger:'test',product:'DMC24'},'test:'+crypto.randomUUID(),'queued');return json({id,...await sendQueued(env,id,{test:true})});
+  }
+  if(action==='retry'){
+--- v171/server/pricing.mjs
++++ mysql/server/pricing.mjs
+@@ -41,7 +41,7 @@
+  if(!env.DB)throw Error('Pricing storage unavailable');
+  return {
+   read:slug=>env.DB.prepare('SELECT * FROM country_pricing WHERE slug = ?').bind(slug).first(),
+-  save:(slug,plans,revision,user,setupFees)=>env.DB.prepare('INSERT INTO country_pricing (slug,draft,setup_draft,revision,updated_by,updated_at) VALUES (?,?,?,1,?,?) ON CONFLICT(slug) DO NOTHING').bind(slug,JSON.stringify(plans),JSON.stringify(setupFees),user,new Date().toISOString()).run(),
++  save:(slug,plans,revision,user,setupFees)=>env.DB.prepareIgnore('INSERT INTO country_pricing (slug,draft,setup_draft,revision,updated_by,updated_at) VALUES (?,?,?,1,?,?)').bind(slug,JSON.stringify(plans),JSON.stringify(setupFees),user,new Date().toISOString()).run(),
+   update:(slug,plans,revision,user,setupFees)=>env.DB.prepare('UPDATE country_pricing SET draft=?,setup_draft=?,revision=revision+1,updated_by=?,updated_at=? WHERE slug=? AND revision=?').bind(JSON.stringify(plans),JSON.stringify(setupFees),user,new Date().toISOString(),slug,revision).run(),
+   publish:(slug,revision,user)=>env.DB.prepare('UPDATE country_pricing SET published=draft,setup_published=setup_draft,published_revision=revision,published_at=?,updated_by=? WHERE slug=? AND revision=?').bind(new Date().toISOString(),user,slug,revision).run()
+  };
+--- v171/server/seo-management.mjs
++++ mysql/server/seo-management.mjs
+@@ -45,7 +45,7 @@
+  if(m[2]==='draft'){
+   let draft;try{draft=validateSeo(body.settings)}catch(e){return json({error:e.message},400)}
+   result=body.revision===0
+-   ?await db.prepare('INSERT INTO page_seo (slug,draft,revision,updated_by,updated_at) VALUES (?,?,1,?,?) ON CONFLICT(slug) DO NOTHING').bind(slug,JSON.stringify(draft),'admin',stamp).run()
++   ?await db.prepareIgnore('INSERT INTO page_seo (slug,draft,revision,updated_by,updated_at) VALUES (?,?,1,?,?)').bind(slug,JSON.stringify(draft),'admin',stamp).run()
+    :await db.prepare('UPDATE page_seo SET draft=?,revision=revision+1,updated_by=?,updated_at=? WHERE slug=? AND revision=?').bind(JSON.stringify(draft),'admin',stamp,slug,body.revision).run();
+  }else{
+   if(!row||row.revision!==body.revision)return json({error:'This page changed. Reload it before publishing.'},409);
+--- v171/server/user-management.mjs
++++ mysql/server/user-management.mjs
+@@ -6,7 +6,7 @@
+ export const audit=(env,actor,event,target)=>env.DB.prepare('INSERT INTO admin_audit(id,actor,event,target,created_at) VALUES(?,?,?,?,?)').bind(crypto.randomUUID(),actor,event,target,new Date().toISOString()).run();
+ export async function userManagement(req,env,session){
+  if(!session?.superAdmin)return json({error:'Super Admin access required.'},403);
+- if(req.method==='GET'){const rows=await env.DB.prepare('SELECT id,name,email,status,permissions,revision,created_at FROM admin_users ORDER BY name COLLATE NOCASE').all(),logs=await env.DB.prepare('SELECT actor,event,target,created_at FROM admin_audit ORDER BY created_at DESC LIMIT 100').all();return json({users:rows.results.map(r=>({...r,permissions:JSON.parse(r.permissions)})),modules:permissionModules,logs:logs.results});}
++ if(req.method==='GET'){const rows=await env.DB.prepare('SELECT id,name,email,status,permissions,revision,created_at FROM admin_users ORDER BY name COLLATE utf8mb4_unicode_ci').all(),logs=await env.DB.prepare('SELECT actor,event,target,created_at FROM admin_audit ORDER BY created_at DESC LIMIT 100').all();return json({users:rows.results.map(r=>({...r,permissions:JSON.parse(r.permissions)})),modules:permissionModules,logs:logs.results});}
+  if(req.method!=='POST')return json({error:'Method not allowed'},405);
+  if(req.headers.get('Origin')!==new URL(req.url).origin||!req.headers.get('Content-Type')?.startsWith('application/json'))return json({error:'Request not allowed'},403);
+  const raw=await req.text();if(raw.length>15000)return json({error:'Request too large'},413);let b;try{b=JSON.parse(raw);}catch{return json({error:'Invalid request'},400);}
+@@ -30,7 +30,7 @@
+  let r;if(row)r=await env.DB.prepare('UPDATE admin_users SET name=?,email=?,status=?,permissions=?,revision=revision+1,password_hash=?,reset_hash=?,reset_expires=? WHERE id=? AND revision=?').bind(name,email,status,JSON.stringify(permissions),needsSetup?null:row.password_hash,token?await hash(token):null,token?Date.now()+24*3600000:null,id,b.revision).run();
+  else r=await env.DB.prepare('INSERT INTO admin_users(id,name,email,status,permissions,revision,password_hash,reset_hash,reset_expires,created_at) VALUES(?,?,?,?,?,1,NULL,?,?,?)').bind(id,name,email,status,JSON.stringify(permissions),token?await hash(token):null,token?Date.now()+24*3600000:null,new Date().toISOString()).run();
+  if(!r.meta.changes)return json({error:'User changed. Reload.'},409);
+- }catch(e){if(/UNIQUE/.test(e.message))return json({error:'This email already has an account.'},409);throw e;}
++ }catch(e){if(e.code==='ER_DUP_ENTRY'||/UNIQUE/.test(e.message))return json({error:'This email already has an account.'},409);throw e;}
+  await audit(env,session.id,row?'User updated':'User created',id);return json({ok:true,...(token?{setupPath:'/admin/login#setup='+token}:{})});
+ }
+ export async function setupPassword(req,env){
+--- v171/server/worker.mjs
++++ mysql/server/worker.mjs
+@@ -16,9 +16,7 @@
+ import {visibility,canonicalCountry,filterHtml,destinationApi} from './destinations.mjs';
+ import {catalog,htmlFiles} from './generated.mjs';
+ import {dbStore,validate,effective,withLimits,validateSetup,effectiveSetup} from './pricing.mjs';
+-const OWNER_EMAIL='vishal@puratech.co.in';
+ const response=(value,status=200)=>Response.json(value,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
+-function user(req){const id=req.headers.get('oai-authenticated-user-id'),email=req.headers.get('oai-authenticated-user-email');return id&&email?.toLowerCase()===OWNER_EMAIL?id:null;}
+ export default {async fetch(req,env,ctx){
+  const url=new URL(req.url),path=url.pathname.replace(/\/$/,'')||'/';
+  // Consolidate public page aliases only; preserve private auth flows and API methods.
+@@ -51,7 +49,7 @@
+  if(path.startsWith('/api/admin/seo/')){try{return await seoAdminApi(req,env);}catch(e){console.error('SEO management unavailable',e.message);return response({error:'SEO settings are temporarily unavailable. Please retry.'},503);}}
+  if(path.startsWith('/api/demo-')||path.startsWith('/api/admin/demo-')){try{return await demoApi(req,env,!!adminIdentity,ctx);}catch(e){console.error('Demo request failed',e.message);return response({error:'We could not save or load the request. Please retry.'},503);}}
+  const adminPage=['/plan-management-review','/plan-management-review.html','/plan-management'].includes(path);
+- if(path.startsWith('/api/analytics/')){try{return await analyticsApi(req,env,path==='/api/analytics/events'?!!user(req)||!!await adminSession(req,env):!!adminIdentity);}catch(e){console.error('Analytics failed',e.message);return response({error:'Analytics is temporarily unavailable. Please retry.'},503);}}
++ if(path.startsWith('/api/analytics/')){try{return await analyticsApi(req,env,path==='/api/analytics/events'?!!await adminSession(req,env):!!adminIdentity);}catch(e){console.error('Analytics failed',e.message);return response({error:'Analytics is temporarily unavailable. Please retry.'},503);}}
+  if(path.startsWith('/api/brochure-')||path.startsWith('/api/brochures/')||brochureFromPath(path)){
+   try{const id=brochureFromPath(path);if(id){if(!['GET','HEAD'].includes(req.method))return response({error:'Method not allowed'},405);return await download(req,env,id);}return await brochureApi(req,env,!!adminIdentity,ctx);}
+   catch(e){console.error('Brochure request failed',e.message);return response({error:'We could not prepare your download. Please retry shortly.'},503);}
+--- v171/scripts/build-pricing.mjs
++++ mysql/scripts/build-pricing.mjs
+@@ -13,15 +13,15 @@
+ import {build} from 'esbuild';
+ import QRCode from 'qrcode';
+ import {brochureContent} from './brochure-content.mjs';
+-const js=fs.readFileSync('dist/js/main.js','utf8');
++const js=fs.readFileSync('website/js/main.js','utf8');
+ const routes=Object.entries(JSON.parse(js.match(/const pageModules=(\{.*\});/)[1])).filter(([,v])=>v.includes('common-destination-pricing')).map(([s])=>s);
+ const trails=JSON.parse(fs.readFileSync('BREADCRUMBS.json','utf8'));
+ const catalog={};const brochures={};
+-for(const slug of routes){if(slug==='uae'||slug.endsWith('-review'))continue;const dom=new JSDOM(fs.readFileSync('dist/'+slug+'.html','utf8'),{runScripts:'outside-only',url:'https://example.com/'+slug});Object.defineProperty(dom.window.document,'currentScript',{value:dom.window.document.querySelector('script[src]')});dom.window.fetch=async()=>({ok:false});dom.window.eval(js.replaceAll(',"live-destination-pricing"','').replaceAll(',"user-slider-review"',''));const doc=dom.window.document;const cards=[...doc.querySelectorAll('main .sl-plan')];catalog[slug]={name:trails[slug]?.at(-1)?.name||slug,plans:['Business','Professional','Professional Plus'].map((name,i)=>{const card=cards.find(c=>c.querySelector('h3').textContent.trim()===name);return {enabled:!!card,users:card?Number(card.textContent.match(/(?:Up to|Minimum)\s+(\d+)\s+users/i)?.[1]||[5,10,20][i]):[5,10,20][i],monthly:[350,550,950][i],yearly:[3600,6000,10800][i],extra:'',extraYearly:'',discount:0,from:'',to:''};})};catalog[slug].setupFees=['Business','Professional','Professional Plus','Enterprise'].map(name=>{const card=cards.find(c=>c.querySelector('h3').textContent.trim()===name);const text=card?.querySelector('.sl-setup-fee')?.textContent||'';const amount=text.match(/USD\s*([\d,]+(?:\.\d+)?)/i);if(card&&!amount&&!/none|no setup/i.test(text))throw Error('Missing setup fee for '+slug+' '+name);return {enabled:!!card,fee:amount?Number(amount[1].replaceAll(',','')):0,discount:0,from:'',to:''};});brochures[slug]=brochureContent(doc,slug,catalog[slug].name);dom.window.close();}
++for(const slug of routes){if(slug==='uae'||slug.endsWith('-review'))continue;const dom=new JSDOM(fs.readFileSync('website/'+slug+'.html','utf8'),{runScripts:'outside-only',url:'https://example.com/'+slug});Object.defineProperty(dom.window.document,'currentScript',{value:dom.window.document.querySelector('script[src]')});dom.window.fetch=async()=>({ok:false});dom.window.eval(js.replaceAll(',"live-destination-pricing"','').replaceAll(',"user-slider-review"',''));const doc=dom.window.document;const cards=[...doc.querySelectorAll('main .sl-plan')];catalog[slug]={name:trails[slug]?.at(-1)?.name||slug,plans:['Business','Professional','Professional Plus'].map((name,i)=>{const card=cards.find(c=>c.querySelector('h3').textContent.trim()===name);return {enabled:!!card,users:card?Number(card.textContent.match(/(?:Up to|Minimum)\s+(\d+)\s+users/i)?.[1]||[5,10,20][i]):[5,10,20][i],monthly:[350,550,950][i],yearly:[3600,6000,10800][i],extra:'',extraYearly:'',discount:0,from:'',to:''};})};catalog[slug].setupFees=['Business','Professional','Professional Plus','Enterprise'].map(name=>{const card=cards.find(c=>c.querySelector('h3').textContent.trim()===name);const text=card?.querySelector('.sl-setup-fee')?.textContent||'';const amount=text.match(/USD\s*([\d,]+(?:\.\d+)?)/i);if(card&&!amount&&!/none|no setup/i.test(text))throw Error('Missing setup fee for '+slug+' '+name);return {enabled:!!card,fee:amount?Number(amount[1].replaceAll(',','')):0,discount:0,from:'',to:''};});brochures[slug]=brochureContent(doc,slug,catalog[slug].name);dom.window.close();}
+ for(const c of Object.values(catalog))c.plans.forEach((p,i)=>p.maxUsers=Math.max(p.users,[5,20,50][i]));
+ const demoQR=QRCode.create(siteOrigin+'/request-demo',{errorCorrectionLevel:'M'});
+ fs.writeFileSync('server/brochures-generated.mjs','export const brochures='+JSON.stringify(brochures)+';\nexport const demoQR='+JSON.stringify({size:demoQR.modules.size,data:[...demoQR.modules.data]})+';');
+-const htmlFiles={};for(const file of fs.readdirSync('dist').filter(f=>f.endsWith('.html')))htmlFiles[file.slice(0,-5)]=fs.readFileSync('dist/'+file,'utf8');
++const htmlFiles={};for(const file of fs.readdirSync('website').filter(f=>f.endsWith('.html')))htmlFiles[file.slice(0,-5)]=fs.readFileSync('website/'+file,'utf8');
+ // Materialize existing JS-authored content for crawlers without changing its design.
+ for(const slug of ['how-to-adopt-dmc24','seychelles','saudi-arabia','about-puratech']){
+  const dom=new JSDOM(htmlFiles[slug],{runScripts:'outside-only',url:siteOrigin+'/'+slug});
+@@ -80,13 +80,7 @@
+ }
+ fs.writeFileSync('server/generated.mjs','export const catalog='+JSON.stringify(catalog)+';\nexport const htmlFiles='+JSON.stringify(htmlFiles)+';\nexport const seoCatalog='+JSON.stringify(seoCatalog)+';');
+ securePdfs();
+-fs.mkdirSync('dist/server',{recursive:true});await build({entryPoints:['server/worker.mjs'],outfile:'dist/server/index.js',bundle:true,format:'esm',platform:'browser',target:'es2022',minify:true});
+-fs.rmSync('dist/client',{recursive:true,force:true});fs.mkdirSync('dist/client',{recursive:true});for(const item of fs.readdirSync('dist'))if(!['server','client','.openai','downloads'].includes(item)&&!item.endsWith('.html'))fs.cpSync('dist/'+item,'dist/client/'+item,{recursive:true});
+-fs.rmSync('dist/protected-brochures',{recursive:true,force:true});
+-fs.mkdirSync('dist/.openai',{recursive:true});fs.copyFileSync('.openai/hosting.json','dist/.openai/hosting.json');
+-// Preserve migration sidecars for source-only remote deployments as well as archive uploads.
+-fs.cpSync('drizzle','dist/.openai/drizzle',{recursive:true});
+-
+-// HTML must be served by the Worker so destination visibility cannot be bypassed.
+-if(fs.readdirSync('dist/client').some(f=>f.endsWith('.html')))throw Error('Static HTML would bypass destination visibility');
+-console.log('Built pricing worker and preserved '+Object.keys(htmlFiles).length+' HTML pages; '+Object.keys(catalog).length+' countries.');
++fs.mkdirSync('private-assets',{recursive:true});
++fs.cpSync('website/protected-brochures','private-assets/protected-brochures',{recursive:true});
++fs.rmSync('website/protected-brochures',{recursive:true,force:true});
++console.log('Built '+Object.keys(htmlFiles).length+' HTML pages; '+Object.keys(catalog).length+' destinations.');
+--- v171/scripts/secure-brochure-assets.mjs
++++ mysql/scripts/secure-brochure-assets.mjs
+@@ -9,11 +9,11 @@
+  'multi-dmc':['DMC24_Multi_DMC_Brochure.pdf','Multi-DMC']
+ };
+ export function securePdfs(){
+- const data={};fs.mkdirSync('dist/protected-brochures',{recursive:true});
++ const data={};fs.mkdirSync('website/protected-brochures',{recursive:true});
+  for(const [id,[file,title]] of Object.entries(files)){
+   const key=crypto.randomBytes(32),iv=crypto.randomBytes(12),cipher=crypto.createCipheriv('aes-256-gcm',key,iv);
+   const encrypted=Buffer.concat([iv,cipher.update(fs.readFileSync('brochure-assets/'+file)),cipher.final(),cipher.getAuthTag()]);
+-  const asset='/protected-brochures/'+id+'.bin';fs.writeFileSync('dist'+asset,encrypted);
++  const asset='/protected-brochures/'+id+'.bin';fs.writeFileSync('website'+asset,encrypted);
+   data[id]={file,title,asset,key:[...key]};
+  }
+  fs.writeFileSync('server/secured-pdfs-generated.mjs','export const securedPdfs='+JSON.stringify(data)+';');
+--- v171/scripts/generate-seo-structure.py
++++ mysql/scripts/generate-seo-structure.py
+@@ -32,7 +32,7 @@
+ DATES = json.loads((ROOT / 'ARTICLE_DATES.json').read_text())
+ person = {'@type':'Person', '@id':url(PROFILE['slug'])+'#person', 'name':PROFILE['author'], 'url':url(PROFILE['slug']), 'description':PROFILE['authorBio'], 'sameAs':[PROFILE['authorUrl']]}
+ report = {}
+-for path in sorted((ROOT / 'dist').glob('*.html')):
++for path in sorted((ROOT / 'website').glob('*.html')):
+     slug = path.stem
+     # Existing owner/review tools are intentionally outside the public SEO manifest.
+     if slug.endswith("-review") and slug not in META:
+--- v171/scripts/minify-assets.cjs
++++ mysql/scripts/minify-assets.cjs
+@@ -7,16 +7,18 @@
+ const root = path.resolve(__dirname, '..');
+ (async () => {
+   const hashes = {};
+-  for (const [kind, target] of [['css', 'es2020'], ['js', 'es2020']]) {
+-    const input = path.join(root, 'dist', kind, 'main.' + kind);
++  for (const [kind, target] of [['js', 'es2020']]) {
++    const input = path.join(root, 'website', kind, 'main.' + kind);
+     const output = input.replace('.' + kind, '.min.' + kind);
+     await esbuild.build({entryPoints:[input], outfile:output, minify:true, target, legalComments:'none', logLevel:'warning'});
+     hashes[kind] = crypto.createHash('sha256').update(fs.readFileSync(output)).digest('hex').slice(0,12);
+     console.log(kind, fs.statSync(input).size, '->', fs.statSync(output).size, 'bytes');
+   }
+-  for (const file of fs.readdirSync(path.join(root,'dist')).filter(x=>x.endsWith('.html'))) {
+-    const p=path.join(root,'dist',file);let s=fs.readFileSync(p,'utf8');
+-    s=s.replace(/href="css\/main(?:\.min)?\.css(?:\?v=[^"]*)?"/g, `href="css/main.min.css?v=${hashes.css}"`);
++  hashes.css = crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'website/css/main.css'))).digest('hex').slice(0,12);
++  fs.rmSync(path.join(root,'website/css/main.min.css'),{force:true});
++  for (const file of fs.readdirSync(path.join(root,'website')).filter(x=>x.endsWith('.html'))) {
++    const p=path.join(root,'website',file);let s=fs.readFileSync(p,'utf8');
++    s=s.replace(/href="css\/main(?:\.min)?\.css(?:\?v=[^"]*)?"/g, `href="css/main.css?v=${hashes.css}"`);
+     const re=/<script\b[^>]*src="js\/main(?:\.min)?\.js(?:\?v=[^"]*)?"[^>]*><\/script>/g;
+     const matches=[...s.matchAll(re)];if(matches.length!==1)throw new Error('Expected one shared script: '+file);
+     let tag=matches[0][0].replace(/src="[^"]+"/,`src="js/main.min.js?v=${hashes.js}"`);

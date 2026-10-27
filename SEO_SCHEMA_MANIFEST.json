@@ -1,0 +1,1014 @@
+{
+  "about-puratech": {
+    "canonical": "https://dmc24.in/about-puratech",
+    "page_type": "AboutPage",
+    "schema_types": [
+      "AboutPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "about": {
+    "canonical": "https://dmc24.in/about",
+    "page_type": "AboutPage",
+    "schema_types": [
+      "AboutPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "admin-login": {
+    "canonical": "https://dmc24.in/admin-login",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication"
+    ]
+  },
+  "admin": {
+    "canonical": "https://dmc24.in/admin",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication"
+    ]
+  },
+  "ai-itinerary-creation": {
+    "canonical": "https://dmc24.in/ai-itinerary-creation",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "b2b-distribution-agent-needs": {
+    "canonical": "https://dmc24.in/b2b-distribution-agent-needs",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "b2b": {
+    "canonical": "https://dmc24.in/b2b",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "b2c": {
+    "canonical": "https://dmc24.in/b2c",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "bali": {
+    "canonical": "https://dmc24.in/bali",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "benefits-preview": {
+    "canonical": "https://dmc24.in/benefits-preview",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "benefits": {
+    "canonical": "https://dmc24.in/benefits",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "blog-management-review": {
+    "canonical": "https://dmc24.in/blog-management-review",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "blog-management": {
+    "canonical": "https://dmc24.in/blog-management",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "blogs": {
+    "canonical": "https://dmc24.in/blogs",
+    "page_type": "CollectionPage",
+    "schema_types": [
+      "CollectionPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "bookings-reservations": {
+    "canonical": "https://dmc24.in/bookings-reservations",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "botswana": {
+    "canonical": "https://dmc24.in/botswana",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "brochure-enquiries": {
+    "canonical": "https://dmc24.in/brochure-enquiries",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "brochures": {
+    "canonical": "https://dmc24.in/brochures",
+    "page_type": "CollectionPage",
+    "schema_types": [
+      "CollectionPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "cambodia": {
+    "canonical": "https://dmc24.in/cambodia",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "case-studies": {
+    "canonical": "https://dmc24.in/case-studies",
+    "page_type": "CollectionPage",
+    "schema_types": [
+      "CollectionPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "case-study-kenya": {
+    "canonical": "https://dmc24.in/case-study-kenya",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "case-study-kerala": {
+    "canonical": "https://dmc24.in/case-study-kerala",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "case-study-maldives": {
+    "canonical": "https://dmc24.in/case-study-maldives",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "case-study-mauritius": {
+    "canonical": "https://dmc24.in/case-study-mauritius",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "case-study-sri-lanka": {
+    "canonical": "https://dmc24.in/case-study-sri-lanka",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "case-study-uae": {
+    "canonical": "https://dmc24.in/case-study-uae",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "connected-dmc-workflow": {
+    "canonical": "https://dmc24.in/connected-dmc-workflow",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "contact": {
+    "canonical": "https://dmc24.in/contact",
+    "page_type": "ContactPage",
+    "schema_types": [
+      "ContactPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "contracting-products": {
+    "canonical": "https://dmc24.in/contracting-products",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "contracts-and-travel-api-inventory": {
+    "canonical": "https://dmc24.in/contracts-and-travel-api-inventory",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "costing-quotations": {
+    "canonical": "https://dmc24.in/costing-quotations",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "dashboards-mis": {
+    "canonical": "https://dmc24.in/dashboards-mis",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "demo-requests": {
+    "canonical": "https://dmc24.in/demo-requests",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "destinations": {
+    "canonical": "https://dmc24.in/destinations",
+    "page_type": "CollectionPage",
+    "schema_types": [
+      "CollectionPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "dubai": {
+    "canonical": "https://dmc24.in/dubai",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "egypt": {
+    "canonical": "https://dmc24.in/egypt",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "email-automation": {
+    "canonical": "https://dmc24.in/email-automation",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "enquiry-to-confirmation": {
+    "canonical": "https://dmc24.in/enquiry-to-confirmation",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "faqs-review": {
+    "canonical": "https://dmc24.in/faqs-review",
+    "page_type": "FAQPage",
+    "schema_types": [
+      "FAQPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "faqs": {
+    "canonical": "https://dmc24.in/faqs",
+    "page_type": "FAQPage",
+    "schema_types": [
+      "FAQPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "features-preview": {
+    "canonical": "https://dmc24.in/features-preview",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "features": {
+    "canonical": "https://dmc24.in/features",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "file-wise-booking-profitability": {
+    "canonical": "https://dmc24.in/file-wise-booking-profitability",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "finance-profitability": {
+    "canonical": "https://dmc24.in/finance-profitability",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "grow-revenue-through-local-sales": {
+    "canonical": "https://dmc24.in/grow-revenue-through-local-sales",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "home-preview": {
+    "canonical": "https://dmc24.in/home-preview",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization"
+    ]
+  },
+  "hong-kong": {
+    "canonical": "https://dmc24.in/hong-kong",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "how-to-adopt-dmc24": {
+    "canonical": "https://dmc24.in/how-to-adopt-dmc24",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Person",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "icon-style-preview": {
+    "canonical": "https://dmc24.in/icon-style-preview",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "index": {
+    "canonical": "https://dmc24.in/",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication"
+    ]
+  },
+  "integrations": {
+    "canonical": "https://dmc24.in/integrations",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "international-market-control": {
+    "canonical": "https://dmc24.in/international-market-control",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "kenya": {
+    "canonical": "https://dmc24.in/kenya",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "local-sales-revenue-after-arrival": {
+    "canonical": "https://dmc24.in/local-sales-revenue-after-arrival",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "local-sales": {
+    "canonical": "https://dmc24.in/local-sales",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "malaysia": {
+    "canonical": "https://dmc24.in/malaysia",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "maldives": {
+    "canonical": "https://dmc24.in/maldives",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "mauritius": {
+    "canonical": "https://dmc24.in/mauritius",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "mid-office": {
+    "canonical": "https://dmc24.in/mid-office",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "multi-dmc": {
+    "canonical": "https://dmc24.in/multi-dmc",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "namibia": {
+    "canonical": "https://dmc24.in/namibia",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "oman": {
+    "canonical": "https://dmc24.in/oman",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "operations-logistics": {
+    "canonical": "https://dmc24.in/operations-logistics",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "pricing": {
+    "canonical": "https://dmc24.in/pricing",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "product-preview": {
+    "canonical": "https://dmc24.in/product-preview",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "real-time-reports-dmc-leaders": {
+    "canonical": "https://dmc24.in/real-time-reports-dmc-leaders",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "request-demo": {
+    "canonical": "https://dmc24.in/request-demo",
+    "page_type": "ContactPage",
+    "schema_types": [
+      "ContactPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "resources": {
+    "canonical": "https://dmc24.in/resources",
+    "page_type": "CollectionPage",
+    "schema_types": [
+      "CollectionPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "rwanda": {
+    "canonical": "https://dmc24.in/rwanda",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "sales-crm": {
+    "canonical": "https://dmc24.in/sales-crm",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "saudi-arabia": {
+    "canonical": "https://dmc24.in/saudi-arabia",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "seo-management": {
+    "canonical": "https://dmc24.in/seo-management",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "seychelles": {
+    "canonical": "https://dmc24.in/seychelles",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "singapore": {
+    "canonical": "https://dmc24.in/singapore",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "south-africa": {
+    "canonical": "https://dmc24.in/south-africa",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "sri-lanka": {
+    "canonical": "https://dmc24.in/sri-lanka",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "tanzania": {
+    "canonical": "https://dmc24.in/tanzania",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "thailand": {
+    "canonical": "https://dmc24.in/thailand",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "uae": {
+    "canonical": "https://dmc24.in/dubai",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "uganda": {
+    "canonical": "https://dmc24.in/uganda",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "user-management-review": {
+    "canonical": "https://dmc24.in/user-management-review",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "user-management": {
+    "canonical": "https://dmc24.in/user-management",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "BreadcrumbList"
+    ]
+  },
+  "vietnam": {
+    "canonical": "https://dmc24.in/vietnam",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "vishal-shah": {
+    "canonical": "https://dmc24.in/vishal-shah",
+    "page_type": "ProfilePage",
+    "schema_types": [
+      "ProfilePage",
+      "WebSite",
+      "Organization",
+      "Person",
+      "BreadcrumbList"
+    ]
+  },
+  "website-analytics": {
+    "canonical": "https://dmc24.in/website-analytics",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "what-is-dmc24": {
+    "canonical": "https://dmc24.in/what-is-dmc24",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "what-multi-dmc-really-means": {
+    "canonical": "https://dmc24.in/what-multi-dmc-really-means",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "why-dmc24": {
+    "canonical": "https://dmc24.in/why-dmc24",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "why-dmcs-need-specialist-software": {
+    "canonical": "https://dmc24.in/why-dmcs-need-specialist-software",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "why-file-wise-pnl-matters": {
+    "canonical": "https://dmc24.in/why-file-wise-pnl-matters",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "Article",
+      "BreadcrumbList"
+    ]
+  },
+  "zambia": {
+    "canonical": "https://dmc24.in/zambia",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  },
+  "zimbabwe": {
+    "canonical": "https://dmc24.in/zimbabwe",
+    "page_type": "WebPage",
+    "schema_types": [
+      "WebPage",
+      "WebSite",
+      "Organization",
+      "SoftwareApplication",
+      "BreadcrumbList"
+    ]
+  }
+}

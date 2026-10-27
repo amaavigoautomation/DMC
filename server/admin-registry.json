@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Website Analytics",
+    "path": "/website-analytics",
+    "description": "Visitor countries, page activity, traffic sources and anonymous journeys.",
+    "icon": "\u2197"
+  },
+  {
+    "title": "Brochure Enquiries",
+    "path": "/brochure-enquiries",
+    "description": "Review brochure requests, qualification details and CSV exports.",
+    "icon": "\u2709"
+  },
+  {
+    "title": "Plan Management",
+    "path": "/plan-management-review",
+    "description": "Manage destination visibility, pricing, user limits and offers.",
+    "icon": "\u2699"
+  },
+  {
+    "title": "SEO Management",
+    "path": "/seo-management",
+    "description": "Page metadata, search previews, indexing and social sharing.",
+    "icon": "\u2315"
+  },
+  {
+    "title": "Demo Requests",
+    "path": "/demo-requests",
+    "description": "Review demo enquiries, selected plans and destinations, and manage follow-up status.",
+    "icon": "\u2709"
+  },
+  {
+    "title": "Blog Management",
+    "path": "/blog-management",
+    "description": "Create, preview and publish blogs, manage images and article SEO.",
+    "icon": "\u270e"
+  },
+  {
+    "title": "Blog Review Prototype",
+    "path": "/blog-management-review",
+    "description": "Original browser-only prototype. Use Blog Management for live publishing.",
+    "icon": "\u270e"
+  },
+  {
+    "title": "Email Automation",
+    "path": "/email-automation",
+    "description": "Microsoft 365 sender, personalised templates, destination benefits and email history.",
+    "icon": "\u2709"
+  },
+  {
+    "title": "User Management",
+    "path": "/user-management",
+    "description": "Individual logins, module permissions, account status and access history.",
+    "icon": "\u2659"
+  }
+]

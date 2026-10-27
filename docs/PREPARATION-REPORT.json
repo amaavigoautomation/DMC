@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-21",
+  "sourceVersion": 171,
+  "build": "passed",
+  "htmlPages": 95,
+  "destinations": 24,
+  "physicalStylesheets": 1,
+  "localTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "javascriptSyntax": "passed",
+  "originalImageAndCssBytes": "preserved",
+  "realMySQLIntegration": "NOT RUN \u2014 server unavailable",
+  "browserVisualRegression": "NOT RUN",
+  "liveDataIncluded": false,
+  "liveSiteChanged": false,
+  "emailsSent": false
+}

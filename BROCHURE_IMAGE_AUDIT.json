@@ -1,0 +1,170 @@
+[
+  {
+    "country": "Namibia",
+    "asset": "img/brochures/namibia.jpg",
+    "source": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+    "description": "Elephants grazing across open savanna grassland",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Zambia",
+    "asset": "img/brochures/zambia.jpg",
+    "source": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+    "description": "Elephants grazing across open savanna grassland",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Zimbabwe",
+    "asset": "img/brochures/zimbabwe.jpg",
+    "source": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+    "description": "Elephants grazing across open savanna grassland",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Botswana",
+    "asset": "img/brochures/botswana.jpg",
+    "source": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+    "description": "Elephants grazing across open savanna grassland",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Bali",
+    "asset": "img/brochures/bali.jpg",
+    "source": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=86",
+    "description": "Tiered Balinese temple beside a lake, reflected in the water",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Dubai",
+    "asset": "img/brochures/dubai.jpg",
+    "source": "img/dubai-hero.webp",
+    "description": "Dubai skyline and coastline with the Burj Al Arab at sunset",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Egypt",
+    "asset": "img/brochures/egypt.jpg",
+    "source": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1400&q=88",
+    "description": "Pyramid at Giza in Egypt with visitors at its base beneath a cloudy sky",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Hong Kong",
+    "asset": "img/brochures/hong-kong.jpg",
+    "source": "img/hong-kong-hero.webp",
+    "description": "Passenger ferry crossing Victoria Harbour beneath the illuminated Hong Kong skyline",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Kenya",
+    "asset": "img/brochures/kenya.jpg",
+    "source": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+    "description": "Elephants grazing across open savanna grassland",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Malaysia",
+    "asset": "img/brochures/malaysia.jpg",
+    "source": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1600&q=86",
+    "description": "Illuminated Petronas Twin Towers and Kuala Lumpur skyline at dusk",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Thailand",
+    "asset": "img/brochures/thailand.jpg",
+    "source": "img/thailand-bangkok-temple.webp",
+    "description": "Traditional Thai temple with ornate tiled roofs and trees beside a Bangkok waterway",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Maldives",
+    "asset": "img/brochures/maldives.jpg",
+    "source": "img/maldives-hero.webp",
+    "description": "Overwater villas, a tropical island resort and a speedboat on a turquoise Maldives lagoon",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Mauritius",
+    "asset": "img/brochures/mauritius.jpg",
+    "source": "img/mauritius-hero.webp",
+    "description": "Aerial view of Le Morne mountain, green coastline and coral lagoon in Mauritius",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Oman",
+    "asset": "img/brochures/oman.jpg",
+    "source": "img/oman-hero.webp",
+    "description": "Muscat waterfront and traditional fort with mountains behind the bay at sunset",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Rwanda",
+    "asset": "img/brochures/rwanda.jpg",
+    "source": "img/rwanda-landscape.webp",
+    "description": "Elephant standing among dense green forest vegetation",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Saudi Arabia",
+    "asset": "img/brochures/saudi-arabia.jpg",
+    "source": "img/destination-saudi-arabia.webp",
+    "description": "Desert rock formations and a resort terrace at sunset",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Seychelles",
+    "asset": "img/brochures/seychelles.jpg",
+    "source": "img/seychelles-anse-source-argent.jpg",
+    "description": "Granite boulders, palms and turquoise water at Anse Source d’Argent beach, La Digue, Seychelles",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Singapore",
+    "asset": "img/brochures/singapore.jpg",
+    "source": "img/singapore-hero.webp",
+    "description": "Singapore Marina Bay skyline, Marina Bay Sands and waterfront gardens after sunset",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "South Africa",
+    "asset": "img/brochures/south-africa.jpg",
+    "source": "img/destination-south-africa.webp",
+    "description": "Elephants and antelope with Table Mountain and the South African coastline in the background",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Sri Lanka",
+    "asset": "img/brochures/sri-lanka.jpg",
+    "source": "https://images.unsplash.com/photo-1578517929167-db9ed31cd5c6?auto=format&fit=crop&w=1400&q=85",
+    "description": "Blue passenger train curving through a green hillside village in Sri Lanka",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Tanzania",
+    "asset": "img/brochures/tanzania.jpg",
+    "source": "img/tanzania-safari.webp",
+    "description": "Safari vehicle on a grassy track beneath acacia trees at sunset in Tanzania",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Uganda",
+    "asset": "img/brochures/uganda.jpg",
+    "source": "img/uganda-falls.webp",
+    "description": "Murchison Falls cascading into a river between forested cliffs in Uganda",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Cambodia",
+    "asset": "img/brochures/cambodia.jpg",
+    "source": "img/cambodia-angkor-wat.webp",
+    "description": "Angkor Wat temple towers reflected in a pool in Cambodia",
+    "usage": "PDF cover and closing page"
+  },
+  {
+    "country": "Vietnam",
+    "asset": "img/brochures/vietnam.jpg",
+    "source": "img/vietnam-ha-long-bay.webp",
+    "description": "Limestone islands rising from the water in Ha Long Bay, Vietnam",
+    "usage": "PDF cover and closing page"
+  }
+]

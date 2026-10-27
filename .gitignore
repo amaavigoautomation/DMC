@@ -1,0 +1,5 @@
+node_modules/
+.env
+var/
+*.log
+migration-data/

@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Demo Requests | DMC24 Admin</title><meta name="description" content="Manage DMC24 demo requests, destinations, variants and follow-up status."><link rel="stylesheet" href="css/main.css?v=3a03eb32502d">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/main.min.js?v=eaf10c313cd0" defer></script>
+
+<!-- BEGIN GENERATED SEO STRUCTURE -->
+<link rel="canonical" href="https://dmc24.in/demo-requests">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://dmc24.in/demo-requests#webpage",
+      "url": "https://dmc24.in/demo-requests",
+      "name": "Demo Requests | DMC24 Admin",
+      "description": "Manage DMC24 demo requests, destinations, variants and follow-up status.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://dmc24.in/#website"
+      },
+      "about": {
+        "@id": "https://dmc24.in/#software"
+      },
+      "breadcrumb": {
+        "@id": "https://dmc24.in/demo-requests#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dmc24.in/#website",
+      "name": "DMC24",
+      "url": "https://dmc24.in/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://dmc24.in/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dmc24.in/#organization",
+      "name": "Puratech",
+      "url": "https://dmc24.in/about-puratech"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dmc24.in/#software",
+      "name": "DMC24",
+      "url": "https://dmc24.in/what-is-dmc24",
+      "applicationCategory": "BusinessApplication",
+      "featureList": [
+        "Sales and CRM",
+        "Supplier contracting",
+        "FIT and group quotations",
+        "Bookings and reservations",
+        "Operations and logistics",
+        "Operational finance and profitability",
+        "Dashboards and reporting"
+      ],
+      "description": "Discover DMC24, inbound tour operator software connecting contracts, quotations, bookings, operations, finance and B2B, B2C and Local Sales channels.",
+      "publisher": {
+        "@id": "https://dmc24.in/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dmc24.in/demo-requests#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Admin",
+          "item": "https://dmc24.in/admin"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Demo Requests",
+          "item": "https://dmc24.in/demo-requests"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- END GENERATED SEO STRUCTURE -->
+</head><body data-page="demo-requests"><nav class="site-breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="admin.html">Admin</a></li><li><span aria-current="page">Demo Requests</span></li></ol></div></nav>
+<main class="brochure-admin"><p class="kicker">DMC24 · Admin access</p><h1>Demo Requests</h1><p>Every demo enquiry in one place, with the selected destination, variant and follow-up status. Times are shown in IST.</p>
+<form id="demo-admin-filters" class="demo-admin-filters"><div><label for="demo-q">Name, email or company</label><input id="demo-q" name="q" type="search" placeholder="Search requests"></div><div><label for="demo-filter-status">Status</label><select id="demo-filter-status" name="status"><option value="">All</option><option value="New">New</option><option value="Contacted">Contacted</option><option value="Demo Scheduled">Demo Scheduled</option><option value="Completed">Completed</option><option value="Closed">Closed</option></select></div><div><label for="demo-filter-variant">Variant</label><select id="demo-filter-variant" name="variant"><option value="">All</option><option value="Business">Business</option><option value="Professional">Professional</option><option value="Professional Plus">Professional Plus</option><option value="Enterprise">Enterprise</option></select></div><div><label for="demo-filter-destination">Destination</label><select id="demo-filter-destination" name="destination"><option value="">All</option></select></div><div><label for="demo-filter-sort">Sort by</label><select id="demo-filter-sort" name="sort"><option value="requested">Requested</option><option value="destination">Destination</option><option value="variant">Variant</option><option value="company">Company</option><option value="status">Status</option></select></div><div><label for="demo-filter-direction">Order</label><select id="demo-filter-direction" name="direction"><option value="desc">Desc</option><option value="asc">Asc</option></select></div><button class="btn btn-primary">Apply filters</button></form><div class="brochure-admin-actions"><button class="btn btn-outline" id="demo-export">Export filtered CSV</button><button class="btn btn-outline" id="demo-refresh">Refresh</button><a href="/request-demo">View demo form</a></div><p id="demo-admin-status" role="status" aria-live="polite"></p><div class="brochure-table-wrap" tabindex="0" role="region" aria-label="Demo requests"><table class="enquiry-table"><colgroup><col class="enquiry-col--requested"><col class="enquiry-col--contact"><col class="enquiry-col--company"><col class="enquiry-col--destination"><col class="enquiry-col--variant"><col class="enquiry-col--team"><col class="enquiry-col--requirements"><col class="enquiry-col--source"><col class="enquiry-col--status"></colgroup><thead><tr><th>Requested (IST)</th><th>Contact</th><th>Company / country</th><th>Destination</th><th>Variant</th><th>Team / timing</th><th>Requirements</th><th>Source</th><th>Status</th></tr></thead><tbody id="demo-admin-rows"></tbody></table></div><div class="brochure-admin-actions"><button class="btn btn-outline" id="demo-admin-prev">Previous</button><button class="btn btn-outline" id="demo-admin-next">Next</button></div></main></body></html>

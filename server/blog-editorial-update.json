@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "author": "Vishal Shah",
+    "authorBio": "Empowering process and people | Technology entrepreneur and consultant | 20+ years of experience | Business process expert | Travel technology consultant | Banking solutions",
+    "authorUrl": "https://www.linkedin.com/in/vishalcshah/"
+  },
+  "patches": {
+    "international-market-control": {
+      "oldIntro": "<p>Your destination may be the same, but the markets you sell to can be very different.</p>\n<p>An agent in India may request a family holiday during school vacations. A European tour operator may negotiate rates for an entire season. A partner in the Middle East may need a different room combination, payment arrangement or cancellation policy.</p>\n<p>Each enquiry draws on your destination expertise. But the commercial conditions behind it may vary.</p>\n<p>For an inbound tour operator, managing those differences is an essential part of selling internationally. The challenge is making sure every quotation uses the right rates, offers and terms—without asking your team to check multiple spreadsheets and email conversations each time.</p>\n",
+      "newIntro": "<p>International market control lets a DMC manage rates, offers, terms and policies for each source market. It helps quotation teams apply the commercial conditions agreed for the agent, travel dates and services in an enquiry.</p>\n"
+    },
+    "enquiry-to-confirmation": {
+      "oldIntro": "<p>An enquiry arrives with travel dates, an approximate budget and a list of destinations. Your sales team starts preparing the proposal. Contracting checks rates, someone follows up with a hotel, and another colleague searches for the latest transfer prices.</p><p>Then the itinerary changes.</p><p>A different hotel, an additional night or a revised passenger count sends the quotation back through the same process.</p><p>For many Destination Management Companies, the delay is spread across dozens of small tasks: finding information, clarifying requirements, repeating calculations and checking which version is current.</p><p>Improving enquiry-to-confirmation time starts with identifying those points of friction.</p>",
+      "newIntro": "<p>Reducing enquiry-to-confirmation time requires a clear brief, accessible supplier rates, controlled quotation revisions and a reliable handover to reservations. These steps reduce repeated checks and keep sales and delivery teams working from the same booking details.</p>\n"
+    },
+    "file-wise-booking-profitability": {
+      "oldIntro": "<p>A busy booking calendar can make a DMC feel successful. Sales are growing, suppliers are receiving reservations and guests are travelling.</p><p>But revenue alone cannot tell you whether those bookings are delivering the profit you expected.</p><p>A file that looked attractive at quotation stage may produce a smaller margin after amendments, supplier changes, additional services or unrecorded expenses.</p><p>For DMC owners and finance teams, file-wise profitability connects the sale to its financial outcome.</p>",
+      "newIntro": "<p>File-wise booking profitability compares a booking’s selling value with its relevant costs. It helps DMC teams see how amendments, supplier changes and additional expenses affect the margin expected at quotation stage.</p>\n"
+    },
+    "ai-itinerary-creation": {
+      "oldIntro": "<p>A well-presented itinerary helps an agent or traveller imagine the experience before departure.</p><p>It explains how the journey unfolds, what each day includes and why the programme is worth choosing.</p><p>For a DMC consultant, producing that document can take considerable time. Even after the services have been costed, descriptions need writing, daily arrangements need explaining and the proposal needs presenting consistently.</p><p>AI assistance can support this work. The strongest results come when it works from a sound operational plan and remains subject to a knowledgeable team’s review.</p>",
+      "newIntro": "<p>AI can help DMC consultants draft itinerary descriptions and present daily programmes consistently. It should work from a feasible, costed itinerary; destination experts still need to check accuracy, availability, travel times and the promises made to the customer.</p>\n"
+    },
+    "contracts-and-travel-api-inventory": {
+      "oldIntro": "<p>Your supplier relationships are a core part of your DMC’s value.</p><p>Negotiated hotel rates, trusted transport partners, experienced guides and distinctive local experiences allow you to build programmes that reflect genuine destination knowledge.</p><p>As your business grows, you may also want access to a wider range of products through travel APIs.</p><p>The practical question is where external supply adds value to your existing inventory—and how it fits into your commercial and operational processes.</p>",
+      "newIntro": "<p>A DMC can combine directly contracted products with inventory accessed through travel APIs. The value depends on how each source supports product choice, commercial terms, availability, booking fulfilment and supplier accountability.</p>\n"
+    },
+    "grow-revenue-through-local-sales": {
+      "oldIntro": "<p>The original booking rarely covers everything a traveller might want to experience.</p><p>After arrival, a guest may decide to visit an attraction, arrange a private transfer, extend a sightseeing programme or book an excursion for a free day.</p><p>Your local representatives, hotel desks and destination teams are often well placed to help.</p><p>The opportunity becomes more valuable when those sales are recorded, paid for and handed over to operations through a clear process.</p>",
+      "newIntro": "<p>Local sales lets DMC representatives, hotel desks and destination teams sell additional services to guests after arrival. Recording the sale, payment, commission and operational handover in one workflow helps the business track its contribution.</p>\n"
+    },
+    "why-dmcs-need-specialist-software": {
+      "oldIntro": "<p>A booking is only one part of a destination management company’s work. Behind a confirmed itinerary sit supplier agreements, passenger requirements, service schedules, commercial conditions and financial commitments.</p><p>A system that records a sale may not provide the information needed to deliver it. That gap becomes more visible as a DMC handles more complex itineraries, source markets and departments.</p><p>Choosing software therefore starts with understanding the complete operation, including what happens before confirmation and after guests return.</p>",
+      "newIntro": "<p>DMC software connects supplier contracting, itinerary costing, reservations, operations and finance around each booking. A DMC needs to assess whether a system supports the full journey from enquiry to service delivery and financial review.</p>\n"
+    },
+    "connected-dmc-workflow": {
+      "oldIntro": "<p>A DMC can have capable people in every department and still lose time at the handovers between them.</p><p>Sales may consider a booking complete when the agent accepts. Reservations may still be waiting for a hotel. Operations may have a passenger list that no longer matches the latest amendment. Finance may be waiting for expenses before it can review the result.</p><p>A connected workflow makes the state of the booking understandable across the business. It defines what moves forward, who takes responsibility and what must be resolved before the next step.</p>",
+      "newIntro": "<p>A connected DMC workflow carries booking information from sales and reservations through operations to finance. It makes status, amendments, responsibilities and unresolved issues visible to the departments that need to act.</p>\n"
+    },
+    "b2b-distribution-agent-needs": {
+      "oldIntro": "<p>A travel agent uses your B2B portal to answer a customer’s question and move a sale forward. The experience needs to make those tasks easier while reflecting the commercial relationship between your businesses.</p><p>Product choice matters, but so do rate clarity, booking status, payment arrangements and access to support.</p><p>An effective B2B platform brings those requirements together without asking the agent to repeatedly contact your office for routine information.</p>",
+      "newIntro": "<p>A DMC’s B2B portal should help travel agents find suitable products, understand their rates and terms, place bookings and track confirmation. Clear payment arrangements and access to support remain part of the experience.</p>\n"
+    },
+    "local-sales-revenue-after-arrival": {
+      "oldIntro": "<p>Guests often make additional decisions once they reach a destination. A free afternoon becomes an opportunity for a private tour. A family decides to add an attraction. A traveller asks for a more convenient departure transfer.</p><p>For a DMC, these requests can become a meaningful sales channel when the business gives them clear ownership, suitable products and dependable fulfilment.</p><p>Building that channel starts with deciding where your team can help guests most effectively.</p>",
+      "newIntro": "<p>Post-arrival sales can turn guest requests for tours, attractions and transfers into a managed DMC revenue channel. The channel needs clear ownership, suitable products, capacity checks and dependable fulfilment before it can grow.</p>\n"
+    },
+    "what-multi-dmc-really-means": {
+      "oldIntro": "<p>A group operating in several destinations needs a broader view of its business. At the same time, each local DMC depends on its own supplier relationships, products and operating knowledge.</p><p>Multi-DMC is about defining how those local businesses connect: what stays with the destination team, what can be shared and where the group needs common visibility.</p><p>A successful model respects local operational differences while making collaboration and distribution more structured.</p>",
+      "newIntro": "<p>Multi-DMC connects destination businesses within a group while retaining local responsibility for suppliers, products and operations. A shared model defines which information and sales channels are coordinated centrally and which decisions remain with each destination.</p>\n"
+    },
+    "why-file-wise-pnl-matters": {
+      "oldIntro": "<p>A monthly sales total tells management how much business was generated. It does not explain which bookings contributed to profit or why some files performed differently from expectations.</p><p>File-wise profit and loss provides that more detailed view. It connects the selling value and relevant costs of a booking so that the business can review its commercial outcome.</p><p>For a DMC, this matters because each itinerary can have a different service mix, supplier structure and operational history.</p>",
+      "newIntro": "<p>File-wise profit and loss connects a booking’s selling value with its relevant costs so a DMC can review the financial outcome. It helps explain which files contributed to profit and where results differed from the original estimate.</p>\n"
+    },
+    "real-time-reports-dmc-leaders": {
+      "oldIntro": "<p>A DMC leader needs to know more than how many bookings the company has received.</p><p>Which enquiries need attention? Which suppliers have not confirmed? Are tomorrow’s guest movements ready? Which customer payments are overdue? Are bookings delivering the margins expected when they were quoted?</p><p>When these answers depend on collecting spreadsheets and calling department heads, management spends valuable time assembling information before it can act.</p><p>Real-time reporting helps shorten that gap by making current business activity easier to see and review.</p>",
+      "newIntro": "<p>Real-time reports help DMC leaders identify pending confirmations, overdue collections, operational exceptions and margin changes using the latest information available in the system. Their usefulness depends on timely data entry and each report’s refresh process.</p>\n"
+    }
+  }
+}

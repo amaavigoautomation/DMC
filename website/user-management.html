@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><base href="/"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>User Management | DMC24 Admin</title><meta name="description" content="Manage individual admin accounts, module permissions and account access for DMC24."><link rel="stylesheet" href="css/main.css?v=3a03eb32502d">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/main.min.js?v=eaf10c313cd0" defer=""></script>
+
+<!-- BEGIN GENERATED SEO STRUCTURE -->
+<link rel="canonical" href="https://dmc24.in/user-management">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://dmc24.in/user-management#webpage",
+      "url": "https://dmc24.in/user-management",
+      "name": "User Management | DMC24 Admin",
+      "description": "Manage individual admin accounts, module permissions and account access for DMC24.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://dmc24.in/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://dmc24.in/user-management#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dmc24.in/#website",
+      "name": "DMC24",
+      "url": "https://dmc24.in/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://dmc24.in/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dmc24.in/#organization",
+      "name": "Puratech",
+      "url": "https://dmc24.in/about-puratech"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dmc24.in/user-management#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Admin",
+          "item": "https://dmc24.in/admin"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "User Management",
+          "item": "https://dmc24.in/user-management"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- END GENERATED SEO STRUCTURE -->
+</head><body data-page="user-management"><nav class="site-breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="admin.html">Admin</a></li><li><span aria-current="page">User Management</span></li></ol></div></nav>
+<main class="user-admin-wrap"><header><p class="kicker">Administration / Access control</p><h1>User Management</h1><p>Give each colleague their own login and access to the modules they need.</p></header><div class="user-admin-note"><strong>Admin · Super Admin</strong><p>Your existing Admin account retains full access. New users start with no module access. Website hosting access is separate; users must also be allowed to open this hosted site.</p></div><p id="um-message" role="status" aria-live="polite"></p><div class="user-admin-grid"><section class="card"><div class="user-admin-toolbar"><h2>Your team</h2><button class="btn btn-primary" id="um-new">Add user</button></div><label>Search users<input type="search" id="um-search" placeholder="Name or email"></label><div id="um-list"></div></section><section class="card"><h2 id="um-heading">Add a user</h2><form id="um-form"><label>Full name<input name="name" maxlength="100" required></label><label>Login email<input name="email" type="email" maxlength="100" required autocomplete="off"></label><label>Account status<select name="status"><option value="active">Active / allow password setup</option><option value="inactive">Inactive / block access</option></select></label><label>Permission preset<select id="um-preset"><option value="custom">Custom</option><option value="none">No access</option><option value="sales">Sales</option><option value="marketing">Marketing</option><option value="commercial">Commercial</option><option value="read">Read-only</option></select></label><h3>Module permissions</h3><p>Publish includes changing live visibility. Email connection credentials and test sends remain Super Admin-only.</p><div class="user-table-scroll"><table class="user-permission-table"><thead><tr><th>Module</th><th>View</th><th>Edit</th><th>Publish</th><th>Export</th><th>Send</th></tr></thead><tbody id="um-permissions"></tbody></table></div><p>View access includes reading module records. Export controls the provided download buttons; it cannot prevent copying information already visible to the user.</p><div class="user-admin-toolbar"><button type="submit" class="btn btn-primary">Save user</button><button type="button" class="btn" id="um-reset" hidden>Issue new password setup link</button></div></form><div id="um-setup" class="user-admin-note" hidden><h3>Password setup link</h3><p>Copy and share this link privately with this user. It expires after 24 hours and works once. It will not be shown again after leaving this page.</p><textarea id="um-link" readonly rows="3" aria-label="Password setup link"></textarea><button id="um-copy" type="button" class="btn">Copy link</button></div></section></div><section class="card"><h2>Recent access activity</h2><p>Account changes, password setup and sign-ins. Times shown in India Standard Time.</p><div class="user-table-scroll"><table class="user-permission-table"><thead><tr><th>Time (IST)</th><th>Actor</th><th>Action</th><th>User</th></tr></thead><tbody id="um-audit"></tbody></table></div></section></main></body></html>

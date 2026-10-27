@@ -1,0 +1,1238 @@
+{
+  "admin_audit": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "actor",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "event",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "target",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "created_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "admin_login_limits": {
+    "columns": [
+      {
+        "name": "bucket",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "attempts",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "reset_at",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "admin_sessions": {
+    "columns": [
+      {
+        "name": "token_hash",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "actor",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "expires_at",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "last_seen",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "credential_version",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "user_id",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "admin_users": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "name",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "email",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(254)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "status",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "permissions",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "1",
+        "primaryKey": false
+      },
+      {
+        "name": "salt",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "password_hash",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "reset_hash",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "reset_expires",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "created_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": [
+      {
+        "name": "admin_users_email_unique",
+        "unique": true,
+        "columns": [
+          "email"
+        ]
+      }
+    ]
+  },
+  "analytics_events": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "visitor",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "session",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "kind",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "path",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "product",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "target",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "country",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "source",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "device",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "returning",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "occurred_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": [
+      {
+        "name": "analytics_session_idx",
+        "unique": false,
+        "columns": [
+          "session"
+        ]
+      },
+      {
+        "name": "analytics_time_idx",
+        "unique": false,
+        "columns": [
+          "occurred_at"
+        ]
+      }
+    ]
+  },
+  "blog_media": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "mime",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "created_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "blog_ordering": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "draft",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "published",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "1",
+        "primaryKey": false
+      },
+      {
+        "name": "published_revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "updated_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "published_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "blog_posts": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "slug",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(254)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "draft",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "published",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "1",
+        "primaryKey": false
+      },
+      {
+        "name": "published_revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "state",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(1024)",
+        "nullable": false,
+        "default": "'draft'",
+        "primaryKey": false
+      },
+      {
+        "name": "updated_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "published_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": [
+      {
+        "name": "blog_posts_slug_unique",
+        "unique": true,
+        "columns": [
+          "slug"
+        ]
+      }
+    ]
+  },
+  "blog_state": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      }
+    ],
+    "indexes": []
+  },
+  "brochure_downloads": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "lead_id",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "brochure",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "title",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "destination",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "source",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "created_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "brochure_leads": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "name",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "email",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(254)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "company",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "countries",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "users",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "timing",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "phone",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "demo",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "created_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "session_hash",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(254)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "expires_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": [
+      {
+        "name": "brochure_leads_session_hash_unique",
+        "unique": true,
+        "columns": [
+          "session_hash"
+        ]
+      }
+    ]
+  },
+  "country_pricing": {
+    "columns": [
+      {
+        "name": "slug",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "draft",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "published",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "published_revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "updated_by",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "updated_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "published_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "setup_draft",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "setup_published",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "demo_requests": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "name",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "email",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(254)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "company",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "phone",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "country",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "destinations",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "role",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "users",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "solutions",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "software",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "timing",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "message",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "source",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "destination",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "variant",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "consent_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "created_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "status",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(1024)",
+        "nullable": false,
+        "default": "'New'",
+        "primaryKey": false
+      },
+      {
+        "name": "revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "1",
+        "primaryKey": false
+      }
+    ],
+    "indexes": [
+      {
+        "name": "demo_requested_idx",
+        "unique": false,
+        "columns": [
+          "created_at"
+        ]
+      }
+    ]
+  },
+  "destination_visibility": {
+    "columns": [
+      {
+        "name": "slug",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "visible",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "1",
+        "primaryKey": false
+      },
+      {
+        "name": "revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "1",
+        "primaryKey": false
+      },
+      {
+        "name": "updated_by",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "updated_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "email_outbox": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "event_key",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(512)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "recipient",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "trigger",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "destination",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(1024)",
+        "nullable": false,
+        "default": "''",
+        "primaryKey": false
+      },
+      {
+        "name": "subject",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "html",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "status",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "attempts",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "detail",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(1024)",
+        "nullable": false,
+        "default": "''",
+        "primaryKey": false
+      },
+      {
+        "name": "created_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "updated_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": [
+      {
+        "name": "email_outbox_event_key_unique",
+        "unique": true,
+        "columns": [
+          "event_key"
+        ]
+      }
+    ]
+  },
+  "email_settings": {
+    "columns": [
+      {
+        "name": "id",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "value",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "secret",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "1",
+        "primaryKey": false
+      },
+      {
+        "name": "tested",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "updated_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  },
+  "page_seo": {
+    "columns": [
+      {
+        "name": "slug",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(191)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": true
+      },
+      {
+        "name": "draft",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "published",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "published_revision",
+        "sqliteType": "INTEGER",
+        "mysqlType": "BIGINT",
+        "nullable": false,
+        "default": "0",
+        "primaryKey": false
+      },
+      {
+        "name": "updated_by",
+        "sqliteType": "TEXT",
+        "mysqlType": "LONGTEXT",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "updated_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": false,
+        "default": null,
+        "primaryKey": false
+      },
+      {
+        "name": "published_at",
+        "sqliteType": "TEXT",
+        "mysqlType": "VARCHAR(32)",
+        "nullable": true,
+        "default": null,
+        "primaryKey": false
+      }
+    ],
+    "indexes": []
+  }
+}

@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Email Automation | DMC24 Admin</title><meta name="description" content="Manage Microsoft 365 email acknowledgements, personalised templates, destination benefits and email history."><link rel="stylesheet" href="css/main.css?v=3a03eb32502d">
+
+
+
+
+
+
+<script src="js/main.min.js?v=eaf10c313cd0" defer></script>
+
+<!-- BEGIN GENERATED SEO STRUCTURE -->
+<link rel="canonical" href="https://dmc24.in/email-automation">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://dmc24.in/email-automation#webpage",
+      "url": "https://dmc24.in/email-automation",
+      "name": "Email Automation | DMC24 Admin",
+      "description": "Manage Microsoft 365 email acknowledgements, personalised templates, destination benefits and email history.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://dmc24.in/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://dmc24.in/email-automation#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dmc24.in/#website",
+      "name": "DMC24",
+      "url": "https://dmc24.in/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://dmc24.in/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dmc24.in/#organization",
+      "name": "Puratech",
+      "url": "https://dmc24.in/about-puratech"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dmc24.in/email-automation#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Admin",
+          "item": "https://dmc24.in/admin"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Email Automation",
+          "item": "https://dmc24.in/email-automation"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- END GENERATED SEO STRUCTURE -->
+</head><body data-page="email-automation"><nav class="site-breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="admin.html">Admin</a></li><li><span aria-current="page">Email Automation</span></li></ol></div></nav>
+<main class="brochure-admin email-console"><p class="kicker">DMC24 · Admin</p><h1>Email Automation</h1><p class="lead">A personal welcome for every enquiry. Relevant product and destination benefits, sent through your Microsoft 365 mailbox.</p>
+<div class="email-status-bar"><strong id="email-connection">Loading connection…</strong><span id="email-live-state">Automatic sending is off until configured.</span></div>
+<p id="email-status" role="status" aria-live="polite"></p>
+<nav class="email-tabs" aria-label="Email settings sections"><button type="button" data-email-tab="connection" aria-pressed="true">Microsoft 365</button><button type="button" data-email-tab="templates" aria-pressed="false">Email templates</button><button type="button" data-email-tab="benefits" aria-pressed="false">Product & country USPs</button><button type="button" data-email-tab="history" aria-pressed="false">Email history</button></nav>
+<div id="email-editing"><section data-email-panel="connection" class="email-panel"><h2>Outgoing email</h2><p>Use a Microsoft 365 business mailbox. Credentials are encrypted on the server and never returned to this page.</p><div class="email-field-grid">
+<label>Sender display name<input id="em-senderName" maxlength="100" autocomplete="organization"></label><label>Sender mailbox<input id="em-sender" type="email" placeholder="Your Microsoft 365 mailbox"></label><label>Reply-to email<input id="em-replyTo" type="email" placeholder="Defaults to the sender mailbox"></label><label>Directory (tenant) ID<input id="em-tenantId" placeholder="Microsoft Entra tenant ID" autocomplete="off"></label><label>Application (client) ID<input id="em-clientId" placeholder="Microsoft Entra application ID" autocomplete="off"></label><label>Client secret value<input id="em-secret" type="password" autocomplete="new-password" placeholder="Leave blank to keep the saved secret"><small id="em-secret-status">No secret saved</small></label></div>
+<label>Email signature<textarea id="em-signature" rows="3" maxlength="700"></textarea></label><label class="email-checkbox"><input id="em-enabled" type="checkbox">Enable automatic responses for new requests</label><p>Save settings, send a test email, then enable automatic responses. Requests received while disabled are recorded but will not be sent later automatically.</p>
+<details class="email-guide"><summary>Microsoft 365 setup instructions</summary><ol><li>Ask your Microsoft 365 administrator to register a single-tenant application in Microsoft Entra ID.</li><li>Authorise Microsoft Graph application mail sending for the chosen mailbox. Use Exchange Online application RBAC to scope access to this mailbox; do not leave an additional unscoped permission grant that widens access.</li><li>Copy the tenant ID and application ID here. Create a client secret and enter its <strong>value</strong> in the password field. Do not enter your mailbox password.</li><li>Enter the sender mailbox and reply-to address, then save. Send a test to an address you control and check its inbox or junk folder.</li><li>Review the templates and country benefits, then enable automatic responses and save again. Set a reminder in your IT process to rotate the Microsoft client secret before it expires.</li></ol><p><a href="https://learn.microsoft.com/en-us/graph/auth-v2-service" target="_blank" rel="noopener">Microsoft application authentication guidance ↗</a> · <a href="https://learn.microsoft.com/en-us/exchange/permissions-exo/application-rbac" target="_blank" rel="noopener">Mailbox access scoping ↗</a></p><p>Sending uses Microsoft Graph over HTTPS. No SMTP password is required. Your sender domain’s SPF, DKIM and DMARC should be configured by your Microsoft 365 administrator.</p></details>
+<div class="email-test-box"><h3>Send a connection test</h3><p>This sends a real sample email using the saved settings. It does not enable prospect emails.</p><label>Test recipient<input id="em-test-recipient" type="email" placeholder="An address you control"></label><button id="em-test" class="btn btn-outline" type="button">Send test email</button></div></section>
+<section data-email-panel="templates" class="email-panel" hidden><div class="email-workspace"><div><h2>Personalised templates</h2><label>Response type<select id="em-template"></select></label><label class="email-checkbox"><input id="em-template-enabled" type="checkbox">Enable this response type</label><label>Subject<input id="em-subject" maxlength="180"></label><label>Opening message<textarea id="em-intro" rows="6" maxlength="1600"></textarea></label><label>Closing message<textarea id="em-closing" rows="5" maxlength="1600"></textarea></label><div class="email-field-grid"><label>Button text<input id="em-cta" maxlength="80"></label><label>Button path<input id="em-path" placeholder="/request-demo" maxlength="160"></label></div><p class="email-help">Country enquiries automatically link to the chosen destination. Brochure emails include a secure seven-day download link plus your chosen button.</p><p>Insert any of these fields into your copy:</p><p id="em-tokens" class="email-tokens"></p></div><div><h2>Preview personalisation</h2><div class="email-field-grid"><label>Prospect name<input id="em-sample-name" value="Aisha"></label><label>Company<input id="em-sample-company" value="Horizon DMC"></label><label>Destination<select id="em-sample-country"><option value="">General / no destination</option></select></label><label>Product<select id="em-sample-product"></select></label></div><button type="button" id="em-preview" class="btn btn-outline">Preview email</button><p id="em-preview-subject"></p><iframe id="em-preview-frame" title="Personalised email preview" sandbox="" referrerpolicy="no-referrer"></iframe></div></div></section>
+<section data-email-panel="benefits" class="email-panel" hidden><h2>Benefits that match the enquiry</h2><p>Use one benefit per line, up to five. Destination emails use country-specific benefits. General emails use the requested product, or Mid Office when no product is selected.</p><div class="email-field-grid"><div><label>Product<select id="em-product"></select></label><label>Product benefits<textarea id="em-product-benefits" rows="9"></textarea></label></div><div><label>Destination<select id="em-country"></select></label><label>Destination benefits<textarea id="em-country-benefits" rows="9"></textarea></label><button id="em-country-reset" class="btn btn-outline" type="button">Use website feature defaults</button><p class="email-help">Defaults come from the destination’s published feature content. New destinations appear here automatically; edit these points to refine the sales message. Features may vary by edition.</p></div></div></section>
+<div class="email-save-bar"><button id="em-save" class="btn btn-primary" type="button">Save email settings</button><button id="em-reload" class="btn btn-outline" type="button">Reload saved settings</button><span id="em-dirty">No unsaved changes</span></div></div>
+<section data-email-panel="history" class="email-panel" hidden><h2>Email history</h2><p>“Accepted” means Microsoft 365 accepted the message; it does not confirm delivery. Check Microsoft Message Trace for delivery or bounce information. Failed messages can be retried here after correcting the cause. Uncertain messages are held to prevent duplicates.</p><button class="btn btn-outline" type="button" id="em-log-refresh">Refresh history</button><div class="brochure-table-wrap" tabindex="0" role="region" aria-label="Email history"><table class="enquiry-table"><thead><tr><th>Requested (IST)</th><th>Recipient</th><th>Response / destination</th><th>Subject</th><th>Status / attempts</th><th>Details / action</th></tr></thead><tbody id="em-log-rows"></tbody></table></div><div class="brochure-admin-actions"><button class="btn btn-outline" id="em-log-prev" type="button">Previous</button><button class="btn btn-outline" id="em-log-next" type="button">Next</button></div></section>
+</main></body></html>

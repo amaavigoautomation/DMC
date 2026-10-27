@@ -1,0 +1,54 @@
+# Page-specific SEO update
+
+Existing URLs, design, plan data and access controls preserved. Homepage brand headline retained. FAQ review promoted to the public FAQ route.
+
+- index: DMC Software for Inbound Tour Operators | DMC24
+- what-is-dmc24: Inbound Tour Operator Software | What Is DMC24?
+- features: DMC Software Features | DMC24
+- benefits: DMC Software Benefits for Your Business | DMC24
+- mid-office: Tour Operator Back Office Software | DMC24
+- sales-crm: Tour Operator CRM & Enquiry Management | DMC24
+- contracting-products: Hotel & Supplier Contracting Software | DMC24
+- costing-quotations: Tour Costing & Quotation Software | DMC24
+- bookings-reservations: Tour Operator Booking & Reservation Software | DMC24
+- operations-logistics: DMC Operations & Transport Management | DMC24
+- finance-profitability: DMC Finance & Profitability Software | DMC24
+- dashboards-mis: DMC Dashboards, Reports & MIS | DMC24
+- b2b: B2B Booking Platform for DMCs | DMC24
+- b2c: B2C Booking Engine for Tour Operators | DMC24
+- local-sales: Local Sales & Excursion Booking Software | DMC24
+- multi-dmc: Multi-DMC Software for Multiple Destinations | DMC24
+- integrations: DMC Software APIs & Integrations | DMC24
+- why-dmc24: Why Choose DMC24? Software Built for DMCs
+- how-to-adopt-dmc24: DMC Software Implementation & Adoption | DMC24
+- pricing: DMC24 Plans & Pricing | DMC Software
+- brochures: DMC24 Product & Destination Brochures
+- request-demo: Request a Personalised DMC24 Demo
+- destinations: DMC Software by Destination | DMC24
+- bali: DMC Software for Bali Tour Operators | DMC24
+- destinations: DMC Software by Destination | DMC24
+- dubai: DMC Software for UAE Tour Operators | DMC24
+- egypt: DMC Software for Egypt Tour Operators | DMC24
+- hong-kong: DMC Software for Hong Kong Tour Operators | DMC24
+- kenya: DMC Software for Kenya Tour Operators | DMC24
+- malaysia: DMC Software for Malaysia Tour Operators | DMC24
+- maldives: DMC Software for Maldives Tour Operators | DMC24
+- mauritius: DMC Software for Mauritius Tour Operators | DMC24
+- oman: DMC Software for Oman Tour Operators | DMC24
+- rwanda: DMC Software for Rwanda Tour Operators | DMC24
+- saudi-arabia: DMC Software for Saudi Arabia Tour Operators | DMC24
+- seychelles: DMC Software for Seychelles Tour Operators | DMC24
+- singapore: DMC Software for Singapore Tour Operators | DMC24
+- south-africa: DMC Software for South Africa Tour Operators | DMC24
+- sri-lanka: DMC Software for Sri Lanka Tour Operators | DMC24
+- tanzania: DMC Software for Tanzania Tour Operators | DMC24
+- uae: DMC Software for UAE Tour Operators | DMC24
+- uganda: DMC Software for Uganda Tour Operators | DMC24
+- thailand: DMC Software for Thailand Tour Operators | DMC24
+- botswana: DMC Software for Botswana Tour Operators | DMC24
+- zimbabwe: DMC Software for Zimbabwe Tour Operators | DMC24
+- zambia: DMC Software for Zambia Tour Operators | DMC24
+- namibia: DMC Software for Namibia Tour Operators | DMC24
+- cambodia: DMC Software for Cambodia Tour Operators | DMC24
+- vietnam: DMC Software for Vietnam Tour Operators | DMC24
+- faqs: DMC Software FAQs | DMC24 Features & Implementation

@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>User Management Review | DMC24 Admin</title><meta name="description" content="Review individual admin accounts, module permissions and access previews for DMC24."><link rel="stylesheet" href="css/main.css?v=3a03eb32502d">
+
+
+
+
+
+<script src="js/main.min.js?v=eaf10c313cd0" defer></script>
+
+<!-- BEGIN GENERATED SEO STRUCTURE -->
+<link rel="canonical" href="https://dmc24.in/user-management-review">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://dmc24.in/user-management-review#webpage",
+      "url": "https://dmc24.in/user-management-review",
+      "name": "User Management Review | DMC24 Admin",
+      "description": "Review individual admin accounts, module permissions and access previews for DMC24.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://dmc24.in/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://dmc24.in/user-management-review#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dmc24.in/#website",
+      "name": "DMC24",
+      "url": "https://dmc24.in/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://dmc24.in/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dmc24.in/#organization",
+      "name": "Puratech",
+      "url": "https://dmc24.in/about-puratech"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dmc24.in/user-management-review#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Admin",
+          "item": "https://dmc24.in/admin"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "User Management Review",
+          "item": "https://dmc24.in/user-management-review"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- END GENERATED SEO STRUCTURE -->
+</head><body data-page="user-management-review"><nav class="site-breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="admin.html">Admin</a></li><li><span aria-current="page">User Management Review</span></li></ol></div></nav>
+<main class="brochure-admin user-review"><p class="kicker">DMC24 · Admin review</p><h1>User Management</h1><p class="lead">Give each team member the access they need.</p><div class="user-review-notice"><strong>Interactive review — no live access changes</strong><p>Try sample accounts, module rights and the proposed login experience. Changes stay in this browser tab. No real users, passwords, invitations or permissions are created.</p></div>
+<div class="user-review-toolbar"><div><h2>Your admin team</h2><p id="ur-count"></p></div><button class="btn btn-primary" id="ur-new" type="button">Add review user</button></div>
+<div class="user-review-filters"><label>Search users<input id="ur-search" type="search" placeholder="Name or email"></label><label>Account status<select id="ur-filter"><option value="">All statuses</option><option>Active</option><option>Invited</option><option>Inactive</option></select></label><button class="btn btn-outline" id="ur-reset" type="button">Reset sample data</button></div>
+<p id="ur-status" role="status" aria-live="polite"></p><div class="brochure-table-wrap" tabindex="0" role="region" aria-label="Review user list"><table class="enquiry-table user-review-table"><thead><tr><th>User / login email</th><th>Role</th><th>Status</th><th>Module access</th><th>Actions</th></tr></thead><tbody id="ur-users"></tbody></table></div>
+<section class="user-review-editor" id="ur-editor" aria-labelledby="ur-editor-title"><div class="user-review-toolbar"><div><p class="kicker">Account & permissions</p><h2 id="ur-editor-title">Create a review user</h2></div><span class="user-review-chip">No access by default</span></div>
+<form id="ur-form"><div class="user-review-fields"><label>Full name<input id="ur-name" required maxlength="100" autocomplete="off" placeholder="Example: Sales colleague"></label><label>Login email<input id="ur-email" required type="email" maxlength="254" autocomplete="off" placeholder="colleague@example.com"></label><label>Status<select id="ur-active"><option>Invited</option><option>Active</option><option>Inactive</option></select></label><label>Start with a permission preset<select id="ur-preset"><option value="none">No access — customise below</option><option value="sales">Sales</option><option value="marketing">Marketing</option><option value="commercial">Commercial</option><option value="readonly">Read-only</option><option value="custom">Custom permissions</option></select></label></div>
+<div class="user-review-columns"><div><h3>Module permissions</h3><p>Select View to grant module access. Additional actions can be assigned separately. Removing View removes every permission for that module.</p><div class="brochure-table-wrap" tabindex="0" role="region" aria-label="Module permissions"><table class="user-permission-table"><thead><tr><th>Module</th><th>View</th><th>Edit</th><th>Publish</th><th>Export</th><th>Send</th></tr></thead><tbody id="ur-matrix"></tbody></table></div><p class="user-review-help">Publish controls live content and plan changes. Send controls test emails and retries. User Management and Microsoft 365 credentials remain Super Admin only. New modules start with no access.</p></div><aside class="user-access-preview" aria-labelledby="ur-preview-title"><p class="kicker">Access preview</p><h3 id="ur-preview-title">This user’s workspace</h3><p id="ur-preview-state"></p><div id="ur-preview-menu"></div><div id="ur-preview-detail" class="user-access-detail"></div><p class="user-review-help">This simulates the proposed access rules; it does not impersonate a user or open restricted records.</p></aside></div>
+<div class="user-review-save"><button type="submit" class="btn btn-primary" id="ur-save">Save review user</button><button type="button" class="btn btn-outline" id="ur-login-preview">Preview login & password setup</button><span id="ur-dirty">No unsaved changes</span></div></form></section>
+<section class="user-review-editor"><h2>Review activity</h2><p>Actions taken in this prototype only. A future live audit log would record the actual user, action and time.</p><ol id="ur-activity" class="user-review-activity"></ol></section>
+<dialog id="ur-dialog" class="user-login-dialog" aria-labelledby="ur-dialog-title"><div class="user-review-toolbar"><h2 id="ur-dialog-title">Individual login — proposed flow</h2><button type="button" class="btn btn-outline" id="ur-dialog-close">Close</button></div><p id="ur-dialog-user"></p><div class="user-review-notice"><strong>Simulation only</strong><p>No invitation is sent and no reset link is generated.</p></div><ol><li>Super Admin creates the user and assigns module rights.</li><li>The user receives a time-limited password-setup invitation.</li><li>They set their own password and sign in using their email.</li><li>They see only permitted modules; server checks protect direct page and API access.</li></ol><p>Planned account controls: password reset, session expiry and immediate access revocation when an account is disabled. Website hosting access remains a separate requirement.</p></dialog>
+</main></body></html>

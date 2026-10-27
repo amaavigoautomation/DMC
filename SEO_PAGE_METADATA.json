@@ -1,0 +1,462 @@
+{
+  "about": {
+    "title": "About DMC24 | Software for Destination Management Companies",
+    "description": "Learn about DMC24, the connected software platform built for destination management companies, from sales and bookings to operations and finance.",
+    "h1": "About DMC24: Software Built for DMCs"
+  },
+  "about-puratech": {
+    "title": "About Puratech | Travel Technology Behind DMC24",
+    "description": "Meet Puratech, the travel technology company behind DMC24. Explore its consulting expertise and software for DMCs, tour operators and travel businesses.",
+    "h1": "Puratech: Travel Technology for Tour Operators"
+  },
+  "b2b": {
+    "title": "B2B Booking Platform for DMCs | DMC24",
+    "description": "Give travel agents access to products, rates and bookings through DMC24. Manage markups and credit while connecting B2B sales to your mid office.",
+    "h1": "B2B Booking Platform for DMCs"
+  },
+  "b2c": {
+    "title": "B2C Booking Engine for Tour Operators | DMC24",
+    "description": "Connect traveller bookings and online payments to your DMC24 mid office. Explore a B2C booking platform for direct destination sales.",
+    "h1": "Sell Direct with Your B2C Booking Platform"
+  },
+  "bali": {
+    "title": "DMC Software for Bali Tour Operators | DMC24",
+    "description": "DMC24 software for Bali DMCs: manage resort and villa contracts, transfers, tours and island operations. Explore features and request a demo.",
+    "h1": "DMC Software for Bali"
+  },
+  "benefits": {
+    "title": "DMC Software Benefits for Your Business | DMC24",
+    "description": "See how DMC24 connects teams, reduces repeated work and improves visibility into bookings, costs and profitability for your destination business.",
+    "h1": "The Benefits of Running Your Business with DMC24"
+  },
+  "blogs": {
+    "title": "DMC Software Insights & Travel Technology Blogs | DMC24",
+    "description": "Explore ideas on DMC operations, travel technology, contracting, distribution and profitability to help your inbound tour business grow.",
+    "h1": "DMC Operations and Travel Technology Insights"
+  },
+  "bookings-reservations": {
+    "title": "Tour Operator Booking & Reservation Software | DMC24",
+    "description": "Turn accepted quotations into bookings, supplier reservations and vouchers with DMC24. Keep confirmed services and amendments connected.",
+    "h1": "Booking and Reservation Management for DMCs"
+  },
+  "brochures": {
+    "title": "DMC24 Product & Destination Brochures",
+    "description": "Download DMC24 product and destination brochures. Explore Mid Office, B2B, B2C, Local Sales, Multi-DMC and country-specific workflows.",
+    "h1": "DMC24 Product & Destination Brochures"
+  },
+  "case-studies": {
+    "title": "DMC Software Implementation Scenarios | DMC24",
+    "description": "Explore DMC24 implementation scenarios and operational transformation patterns for destination management companies planning connected growth.",
+    "h1": "Explore DMC24 in your destination."
+  },
+  "contact": {
+    "title": "Contact DMC24 | Discuss Your DMC Software Requirements",
+    "description": "Contact the DMC24 team to discuss software for your inbound tour operation, destination requirements, integrations, implementation or a product demo.",
+    "h1": "Contact DMC24 About Your DMC Software Needs"
+  },
+  "contracting-products": {
+    "title": "Hotel & Supplier Contracting Software | DMC24",
+    "description": "Manage hotel and supplier contracts, market rates, seasons and offers with DMC24. Connect your contracted products to quotations and bookings.",
+    "h1": "Hotel and Supplier Contracting for DMCs"
+  },
+  "costing-quotations": {
+    "title": "Tour Costing & Quotation Software | DMC24",
+    "description": "Build FIT and group quotations using contracted rates, costs and markups. Connect tour costing, margins and itinerary outputs with DMC24.",
+    "h1": "Tour Costing and Quotation Software"
+  },
+  "dashboards-mis": {
+    "title": "DMC Dashboards, Reports & MIS | DMC24",
+    "description": "Understand sales, outstanding payments, operations and profitability with DMC24 dashboards and MIS reports. Give your team clearer business visibility.",
+    "h1": "DMC Dashboards and Business Reporting"
+  },
+  "destinations": {
+    "title": "DMC Software by Destination | DMC24",
+    "description": "Explore DMC24 destination editions, local workflows and country-specific plans. Find software for your inbound tour operation and request a demo.",
+    "h1": "DMC Software for Your Destination"
+  },
+  "dubai": {
+    "title": "DMC Software for UAE Tour Operators | DMC24",
+    "description": "DMC24 software for Dubai DMCs: manage hotel offers, transfers, attractions, quotations and VAT workflows. Explore features and request a demo.",
+    "h1": "DMC Software for UAE"
+  },
+  "egypt": {
+    "title": "DMC Software for Egypt Tour Operators | DMC24",
+    "description": "DMC24 software for Egypt DMCs: manage cultural itineraries, Nile programmes, transport and group bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Egypt"
+  },
+  "faqs": {
+    "title": "DMC Software FAQs | DMC24 Features & Implementation",
+    "description": "Explore DMC24 FAQs by category: features, destinations, pricing, users, setup fees, integrations, implementation, training and sales channels.",
+    "h1": "DMC Software FAQs: Your DMC24 Questions Answered"
+  },
+  "features": {
+    "title": "DMC Software Features | DMC24",
+    "description": "Explore DMC24 features for contracting, quotations, reservations, operations, finance and distribution. Find the capabilities your destination business needs.",
+    "h1": "DMC Software Features"
+  },
+  "finance-profitability": {
+    "title": "DMC Finance & Profitability Software | DMC24",
+    "description": "Track invoices, receivables, payables and file profitability in DMC24. Connect operational finance with booking information and accounting integrations.",
+    "h1": "Financial Control and Profitability for Your DMC"
+  },
+  "hong-kong": {
+    "title": "DMC Software for Hong Kong Tour Operators | DMC24",
+    "description": "DMC24 software for Hong Kong DMCs: manage hotel contracts, city stays, transfers, quotations and group bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Hong Kong"
+  },
+  "how-to-adopt-dmc24": {
+    "title": "DMC Software Implementation & Adoption | DMC24",
+    "description": "Plan your DMC24 implementation with clear stages for preparation, configuration, training and rollout. Build adoption around your team and workflows.",
+    "h1": "How to Adopt DMC24 in Your Business"
+  },
+  "icon-style-preview": {
+    "title": "DMC24 Icon Style Preview | Design Reference",
+    "description": "Review the DMC24 icon style reference, including visual treatments for product modules and destination capabilities.",
+    "h1": "DMC24 Icon Style and Design Reference"
+  },
+  "index": {
+    "title": "DMC Software for Inbound Tour Operators | DMC24",
+    "description": "Run your destination business with DMC24. Connect contracting, quotations, bookings, operations, finance and sales channels. Request a personalised demo.",
+    "h1": "Your destination. Your business. In command."
+  },
+  "integrations": {
+    "title": "DMC Software APIs & Integrations | DMC24",
+    "description": "Explore DMC24 APIs and integrations for inventory, payments, accounting and distribution. Plan connections around your destination business requirements.",
+    "h1": "Connect DMC24 with Your Business Systems"
+  },
+  "kenya": {
+    "title": "DMC Software for Kenya Tour Operators | DMC24",
+    "description": "Manage safari quotations, park fees, guides, bookings and profitability with DMC24 software for Kenya DMCs. Explore plans and request a demo.",
+    "h1": "DMC Software for Kenya"
+  },
+  "local-sales": {
+    "title": "Local Sales & Excursion Booking Software | DMC24",
+    "description": "Support representatives and hotel desks with DMC24 Local Sales. Manage excursion bookings, collections and commissions alongside destination operations.",
+    "h1": "Local Sales for Representatives and Hotel Desks"
+  },
+  "malaysia": {
+    "title": "DMC Software for Malaysia Tour Operators | DMC24",
+    "description": "DMC24 software for Malaysia DMCs: manage SIC tours, transfers, hotel contracts, quotations and group bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Malaysia"
+  },
+  "maldives": {
+    "title": "DMC Software for Maldives Tour Operators | DMC24",
+    "description": "DMC24 software for Maldives DMCs: manage resort contracts, special offers, island transfers and tour bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Maldives"
+  },
+  "mauritius": {
+    "title": "DMC Software for Mauritius Tour Operators | DMC24",
+    "description": "DMC24 software for Mauritius DMCs: manage hotel contracts, island transfers, excursions and inbound bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Mauritius"
+  },
+  "mid-office": {
+    "title": "Tour Operator Back Office Software | DMC24",
+    "description": "Connect sales, reservations, operations and finance with DMC24 mid office and back office software for inbound tour operators. Explore the workflow.",
+    "h1": "Connected Mid Office Software for Tour Operators"
+  },
+  "multi-dmc": {
+    "title": "Multi-DMC Software for Multiple Destinations | DMC24",
+    "description": "Connect destination offices with DMC24 Multi-DMC software. Combine local operational control with shared distribution through a hub-and-spoke structure.",
+    "h1": "Connect Your Destinations with Multi-DMC"
+  },
+  "oman": {
+    "title": "DMC Software for Oman Tour Operators | DMC24",
+    "description": "DMC24 software for Oman DMCs: manage hotel offers, tours, transport, quotations and destination operations. Explore features and request a demo.",
+    "h1": "DMC Software for Oman"
+  },
+  "operations-logistics": {
+    "title": "DMC Operations & Transport Management | DMC24",
+    "description": "Coordinate transfers, transport, guides and guest services with DMC24 operations software. Keep your destination team connected to confirmed bookings.",
+    "h1": "DMC Operations and Logistics Management"
+  },
+  "pricing": {
+    "title": "DMC24 Plans & Pricing | DMC Software",
+    "description": "Explore DMC24 plans, included users, additional-user rates and setup fees. View destination-specific monthly and yearly pricing and available offers.",
+    "h1": "Find the right plan for your destination."
+  },
+  "request-demo": {
+    "title": "Request a Personalised DMC24 Demo",
+    "description": "Request a DMC24 demonstration tailored to your destinations, team and selected plan. Explore the workflows and sales channels that matter to your business.",
+    "h1": "Request a Personalised DMC24 Demo"
+  },
+  "resources": {
+    "title": "DMC Software Resources & Implementation Guides | DMC24",
+    "description": "Explore DMC24 resources, adoption guidance, implementation scenarios, product information and FAQs for destination management companies.",
+    "h1": "DMC Software Resources and Adoption Guides"
+  },
+  "rwanda": {
+    "title": "DMC Software for Rwanda Tour Operators | DMC24",
+    "description": "DMC24 software for Rwanda DMCs: manage gorilla safari itineraries, lodge rates, transport and inbound bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Rwanda"
+  },
+  "sales-crm": {
+    "title": "Tour Operator CRM & Enquiry Management | DMC24",
+    "description": "Manage agent relationships, enquiries and follow-ups with DMC24 tour operator CRM. Give your sales team visibility from first contact to quotation.",
+    "h1": "CRM for DMCs and Inbound Tour Operators"
+  },
+  "saudi-arabia": {
+    "title": "DMC Software for Saudi Arabia Tour Operators | DMC24",
+    "description": "DMC24 software for Saudi Arabia DMCs: manage religious, heritage and leisure travel with connected tour operations. Explore features and request a demo.",
+    "h1": "DMC Software for Saudi Arabia"
+  },
+  "seychelles": {
+    "title": "DMC Software for Seychelles Tour Operators | DMC24",
+    "description": "DMC24 software for Seychelles DMCs: manage island hotel contracts, transfers, excursions and inbound bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Seychelles"
+  },
+  "singapore": {
+    "title": "DMC Software for Singapore Tour Operators | DMC24",
+    "description": "DMC24 software for Singapore DMCs: manage hotel stays, transfers, attractions, quotations and group bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Singapore"
+  },
+  "south-africa": {
+    "title": "DMC Software for South Africa Tour Operators | DMC24",
+    "description": "DMC24 software for South Africa DMCs: manage safari products, multi-city itineraries, transport and tour bookings. Explore features and request a demo.",
+    "h1": "DMC Software for South Africa"
+  },
+  "sri-lanka": {
+    "title": "DMC Software for Sri Lanka Tour Operators | DMC24",
+    "description": "DMC24 software for Sri Lanka DMCs: manage hotel contracts, mileage, transport, tour quotations and tax workflows. Explore features and request a demo.",
+    "h1": "DMC Software for Sri Lanka"
+  },
+  "tanzania": {
+    "title": "DMC Software for Tanzania Tour Operators | DMC24",
+    "description": "DMC24 software for Tanzania DMCs: manage safari itineraries, lodge rates, transport and inbound tour bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Tanzania"
+  },
+  "uae": {
+    "title": "DMC Software for UAE Tour Operators | DMC24",
+    "description": "DMC24 software for UAE DMCs: manage hotel contracting, transfers, attractions, quotations and VAT workflows. Explore features and request a demo.",
+    "h1": "DMC Software for UAE"
+  },
+  "uganda": {
+    "title": "DMC Software for Uganda Tour Operators | DMC24",
+    "description": "DMC24 software for Uganda DMCs: manage gorilla safaris, lodge contracts, transport and inbound tour bookings. Explore features and request a demo.",
+    "h1": "DMC Software for Uganda"
+  },
+  "what-is-dmc24": {
+    "title": "Inbound Tour Operator Software | What Is DMC24?",
+    "description": "Discover DMC24, inbound tour operator software connecting contracts, quotations, bookings, operations, finance and B2B, B2C and Local Sales channels.",
+    "h1": "What is DMC24?"
+  },
+  "why-dmc24": {
+    "title": "Why Choose DMC24? Software Built for DMCs",
+    "description": "Explore DMC24\u2019s destination-specific workflows, connected operations and sales channels. See how the platform supports your DMC\u2019s next stage of growth.",
+    "h1": "Why Choose DMC24 for Your Destination Business?"
+  },
+  "thailand": {
+    "title": "DMC Software for Thailand Tour Operators | DMC24",
+    "description": "DMC24 software for Thailand DMCs: manage SIC tours, island transfers, hotel contracts, quotations and group bookings. Explore plans and request a demo.",
+    "h1": "DMC Software for Thailand"
+  },
+  "home-preview": {
+    "title": "DMC24 Homepage Design Preview",
+    "description": "Explore a new DMC24 homepage: one connected platform for inbound sales, operations, finance and distribution.",
+    "h1": "Your destination. Your business. In command."
+  },
+  "product-preview": {
+    "title": "What Is DMC24? Product Page Preview",
+    "description": "Discover how DMC24 connects contracting, sales, bookings, operations, finance and distribution for destination management companies.",
+    "h1": "The operating platform behind your entire DMC."
+  },
+  "features-preview": {
+    "title": "DMC24 Features | Design Preview",
+    "description": "Explore DMC24 features for CRM, contracting, quotations, bookings, operations, finance and distribution, built for inbound tour operators.",
+    "h1": "DMC Software Features for Inbound Tour Operators"
+  },
+  "benefits-preview": {
+    "title": "DMC24 Benefits | Design Preview",
+    "description": "Explore how DMC24 helps inbound tour operators respond faster, reduce repeated work, coordinate teams and improve visibility into booking profitability.",
+    "h1": "DMC Software Benefits for Inbound Tour Operators"
+  },
+  "international-market-control": {
+    "title": "International Market Control for DMCs | DMC24",
+    "description": "Manage market-specific rates, offers, terms and policies. Discover how DMCs can protect margins and connect commercial decisions across teams.",
+    "h1": "International Market Control: Manage Different Markets Without Losing Control"
+  },
+  "enquiry-to-confirmation": {
+    "title": "From Enquiry to Confirmation: DMC Workflows | DMC24",
+    "description": "Faster confirmations begin with better handovers between sales, contracting and reservations.",
+    "h1": "From Enquiry to Confirmation: Where DMCs Lose Time\u2014and How to Fix It"
+  },
+  "file-wise-booking-profitability": {
+    "title": "File-Wise Booking Profitability for DMCs | DMC24",
+    "description": "Understand what each booking earns after its actual service costs are accounted for.",
+    "h1": "Your Booking Revenue Looks Good. But Is Every File Profitable?"
+  },
+  "ai-itinerary-creation": {
+    "title": "AI Itinerary Creation for DMC Proposals | DMC24",
+    "description": "Use AI to support itinerary writing while your team controls the accuracy and practicality of the journey.",
+    "h1": "AI Itinerary Creation: Faster Proposals Without Losing Your Destination Expertise"
+  },
+  "contracts-and-travel-api-inventory": {
+    "title": "Own Contracts and Travel APIs: Inventory Mix | DMC24",
+    "description": "Combine destination strength with selected external supply while maintaining commercial control.",
+    "h1": "Your Own Contracts + Travel APIs: Finding the Right Inventory Mix"
+  },
+  "grow-revenue-through-local-sales": {
+    "title": "Grow DMC Revenue Through Local Sales | DMC24",
+    "description": "Give representatives and destination teams a structured way to sell useful additional services after arrival.",
+    "h1": "Beyond the Original Booking: Grow Revenue Through Local Sales"
+  },
+  "why-dmcs-need-specialist-software": {
+    "title": "Why DMCs Need Specialist Travel Software | DMC24",
+    "description": "The operational difference between destination management and simple booking workflows.",
+    "h1": "Why DMCs Need More Than Generic Travel Software"
+  },
+  "connected-dmc-workflow": {
+    "title": "Designing a Connected DMC Workflow | DMC24",
+    "description": "How sales, contracting, reservations, operations and finance can work around the same travel file.",
+    "h1": "From Enquiry to Profitability: Designing a Connected DMC Workflow"
+  },
+  "b2b-distribution-agent-needs": {
+    "title": "B2B Distribution: What Travel Agents Need | DMC24",
+    "description": "Agent onboarding, pricing, credit, inventory and booking workflows.",
+    "h1": "B2B Distribution for DMCs: What Agents Actually Need"
+  },
+  "local-sales-revenue-after-arrival": {
+    "title": "Extend DMC Revenue After Arrival with Local Sales | DMC24",
+    "description": "Turning representatives, hotel desks and destination counters into measurable sales channels.",
+    "h1": "How Local Sales Can Extend Revenue After Arrival"
+  },
+  "what-multi-dmc-really-means": {
+    "title": "What Multi-DMC Really Means | DMC24",
+    "description": "How local destination operations can connect to central distribution and management.",
+    "h1": "What Multi-DMC Really Means"
+  },
+  "why-file-wise-pnl-matters": {
+    "title": "Why File-Wise P&L Matters for DMCs | DMC24",
+    "description": "The difference between measuring revenue and understanding booking profitability.",
+    "h1": "Why File-Wise P&L Matters"
+  },
+  "real-time-reports-dmc-leaders": {
+    "title": "How Real-Time Reports Help DMC Leaders | DMC24",
+    "description": "Turn current operational information into clearer priorities, faster decisions and better commercial control.",
+    "h1": "How Do Real-Time Reports Help DMC Leaders?"
+  },
+  "botswana": {
+    "title": "DMC Software for Botswana Tour Operators | DMC24",
+    "description": "DMC24 for Botswana DMCs: connect safari quotations, suppliers, bookings, operations and finance. Compare plans and request a demo.",
+    "h1": "DMC Software for Botswana"
+  },
+  "zimbabwe": {
+    "title": "DMC Software for Zimbabwe Tour Operators | DMC24",
+    "description": "DMC24 for Zimbabwe DMCs: connect safari quotations, suppliers, bookings, operations and finance. Compare plans and request a demo.",
+    "h1": "DMC Software for Zimbabwe"
+  },
+  "zambia": {
+    "title": "DMC Software for Zambia Tour Operators | DMC24",
+    "description": "DMC24 for Zambia DMCs: connect safari quotations, suppliers, bookings, operations and finance. Compare plans and request a demo.",
+    "h1": "DMC Software for Zambia"
+  },
+  "namibia": {
+    "title": "DMC Software for Namibia Tour Operators | DMC24",
+    "description": "DMC24 for Namibia DMCs: connect safari quotations, suppliers, bookings, operations and finance. Compare plans and request a demo.",
+    "h1": "DMC Software for Namibia"
+  },
+  "cambodia": {
+    "title": "DMC Software for Cambodia Tour Operators | DMC24",
+    "description": "DMC24 software for Cambodia DMCs: manage tours, transfers, hotel contracts, quotations and group bookings. Explore subscription plans and request a demo.",
+    "h1": "DMC Software for Cambodia"
+  },
+  "vietnam": {
+    "title": "DMC Software for Vietnam Tour Operators | DMC24",
+    "description": "DMC24 software for Vietnam DMCs: manage tours, transfers, hotel contracts, quotations and group bookings. Explore subscription plans and request a demo.",
+    "h1": "DMC Software for Vietnam"
+  },
+  "brochure-enquiries": {
+    "title": "DMC24 Brochure Enquiries",
+    "description": "Owner-only management of DMC24 brochure enquiries and downloads.",
+    "h1": "Brochure enquiries"
+  },
+  "website-analytics": {
+    "title": "DMC24 Website Analytics",
+    "description": "Owner-only DMC24 website analytics: pages, visitor countries, sources and anonymous visit journeys.",
+    "h1": "Website analytics"
+  },
+  "admin": {
+    "title": "DMC24 Admin Panel",
+    "description": "Manage DMC24 website analytics, brochure enquiries and destination plans.",
+    "h1": "Your website. Under control."
+  },
+  "admin-login": {
+    "title": "DMC24 Admin Login",
+    "description": "Secure access to the DMC24 administration panel.",
+    "h1": "Welcome back."
+  },
+  "seo-management": {
+    "title": "DMC24 SEO Management",
+    "description": "Secure administration of DMC24 page SEO settings.",
+    "h1": "SEO Management"
+  },
+  "demo-requests": {
+    "title": "Demo Requests | DMC24 Admin",
+    "description": "Manage DMC24 demo requests, destinations, variants and follow-up status.",
+    "h1": "Demo Requests"
+  },
+  "case-study-uae": {
+    "title": "UAE DMC Case Study | DMC24",
+    "description": "Explore an illustrative UAE DMC workflow with DMC24: connected bookings and sic operations. See the operational challenges and solution.",
+    "h1": "Connecting individual bookings with shared service operations"
+  },
+  "case-study-sri-lanka": {
+    "title": "Sri Lanka DMC Case Study | DMC24",
+    "description": "Explore an illustrative Sri Lanka DMC workflow with DMC24: touring itineraries and financial control. See the operational challenges and solution.",
+    "h1": "Keeping a touring itinerary commercially and operationally connected"
+  },
+  "case-study-maldives": {
+    "title": "Maldives DMC Case Study | DMC24",
+    "description": "Explore an illustrative Maldives DMC workflow with DMC24: resort offers and island transfers. See the operational challenges and solution.",
+    "h1": "Bringing resort offers and island transfers into one quotation workflow"
+  },
+  "case-study-mauritius": {
+    "title": "Mauritius DMC Case Study | DMC24",
+    "description": "Explore an illustrative Mauritius DMC workflow with DMC24: contracting and destination sales. See the operational challenges and solution.",
+    "h1": "Connecting contracted offers with sales after arrival"
+  },
+  "case-study-kerala": {
+    "title": "Kerala, India DMC Case Study | DMC24",
+    "description": "Explore an illustrative Kerala, India DMC workflow with DMC24: customised journeys and final accounts. See the operational challenges and solution.",
+    "h1": "Managing a customised Kerala journey from quotation to final accounts"
+  },
+  "case-study-kenya": {
+    "title": "Kenya DMC Case Study | DMC24",
+    "description": "Explore an illustrative Kenya DMC workflow with DMC24: safari costing and field expenditure. See the operational challenges and solution.",
+    "h1": "Keeping safari quotations and field expenditure under control"
+  },
+  "faqs-review": {
+    "title": "DMC24 FAQ Review | Detailed Questions and Answers",
+    "description": "Review detailed DMC24 FAQs by category, covering features, destinations, plans, integrations, training and sales channels.",
+    "h1": "Understand the platform. Plan your next step."
+  },
+  "blog-management-review": {
+    "title": "Blog Management Review | DMC24 Admin",
+    "description": "Protected review of the DMC24 blog editor and publishing workflow.",
+    "h1": "Blog Management"
+  },
+  "blog-management": {
+    "title": "Blog Management | DMC24 Admin",
+    "description": "Secure article editing, media, SEO and publishing for DMC24.",
+    "h1": "Blog Management"
+  },
+  "vishal-shah": {
+    "title": "Vishal Shah | DMC24 Author & Technology Consultant",
+    "description": "Meet Vishal Shah, a technology entrepreneur and consultant with 20+ years of experience in business processes, travel technology and banking solutions.",
+    "h1": "Vishal Shah"
+  },
+  "email-automation": {
+    "title": "Email Automation | DMC24 Admin",
+    "description": "Manage Microsoft 365 email acknowledgements, personalised templates, destination benefits and email history.",
+    "h1": "Email Automation"
+  },
+  "user-management-review": {
+    "title": "User Management Review | DMC24 Admin",
+    "description": "Review individual admin accounts, module permissions and access previews for DMC24.",
+    "h1": "User Management"
+  },
+  "user-management": {
+    "title": "User Management | DMC24 Admin",
+    "description": "Manage individual admin accounts, module permissions and account access for DMC24.",
+    "h1": "User Management"
+  }
+}

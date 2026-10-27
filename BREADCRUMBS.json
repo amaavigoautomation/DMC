@@ -1,0 +1,1161 @@
+{
+  "about-puratech": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "about-puratech",
+      "name": "About Puratech"
+    }
+  ],
+  "about": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "about",
+      "name": "About DMC24"
+    }
+  ],
+  "b2b": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "b2b",
+      "name": "B2B Booking Platform"
+    }
+  ],
+  "b2c": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "b2c",
+      "name": "B2C Booking Platform"
+    }
+  ],
+  "bali": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "bali",
+      "name": "Bali"
+    }
+  ],
+  "benefits": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "what-is-dmc24",
+      "name": "What is DMC24?"
+    },
+    {
+      "slug": "benefits",
+      "name": "Benefits"
+    }
+  ],
+  "blogs": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "resources",
+      "name": "Resources"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    }
+  ],
+  "bookings-reservations": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "mid-office",
+      "name": "Mid Office"
+    },
+    {
+      "slug": "bookings-reservations",
+      "name": "Bookings & Reservations"
+    }
+  ],
+  "brochures": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "resources",
+      "name": "Resources"
+    },
+    {
+      "slug": "brochures",
+      "name": "Brochures"
+    }
+  ],
+  "case-studies": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "resources",
+      "name": "Resources"
+    },
+    {
+      "slug": "case-studies",
+      "name": "Case Studies"
+    }
+  ],
+  "contact": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "contact",
+      "name": "Contact"
+    }
+  ],
+  "contracting-products": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "mid-office",
+      "name": "Mid Office"
+    },
+    {
+      "slug": "contracting-products",
+      "name": "Contracting & Products"
+    }
+  ],
+  "costing-quotations": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "mid-office",
+      "name": "Mid Office"
+    },
+    {
+      "slug": "costing-quotations",
+      "name": "Costing & Quotations"
+    }
+  ],
+  "dashboards-mis": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "mid-office",
+      "name": "Mid Office"
+    },
+    {
+      "slug": "dashboards-mis",
+      "name": "Dashboards & MIS"
+    }
+  ],
+  "destinations": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    }
+  ],
+  "dubai": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "uae",
+      "name": "UAE"
+    },
+    {
+      "slug": "dubai",
+      "name": "Dubai"
+    }
+  ],
+  "egypt": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "egypt",
+      "name": "Egypt"
+    }
+  ],
+  "faqs": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "resources",
+      "name": "Resources"
+    },
+    {
+      "slug": "faqs",
+      "name": "FAQs"
+    }
+  ],
+  "features": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "what-is-dmc24",
+      "name": "What is DMC24?"
+    },
+    {
+      "slug": "features",
+      "name": "Features"
+    }
+  ],
+  "finance-profitability": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "mid-office",
+      "name": "Mid Office"
+    },
+    {
+      "slug": "finance-profitability",
+      "name": "Finance & Profitability"
+    }
+  ],
+  "hong-kong": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "hong-kong",
+      "name": "Hong Kong"
+    }
+  ],
+  "how-to-adopt-dmc24": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "resources",
+      "name": "Resources"
+    },
+    {
+      "slug": "how-to-adopt-dmc24",
+      "name": "How to Adopt DMC24"
+    }
+  ],
+  "icon-style-preview": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "icon-style-preview",
+      "name": "Icon Style Preview"
+    }
+  ],
+  "index": [
+    {
+      "slug": "index",
+      "name": "Home"
+    }
+  ],
+  "integrations": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "what-is-dmc24",
+      "name": "What is DMC24?"
+    },
+    {
+      "slug": "integrations",
+      "name": "APIs & Integrations"
+    }
+  ],
+  "kenya": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "kenya",
+      "name": "Kenya"
+    }
+  ],
+  "local-sales": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "local-sales",
+      "name": "Local Sales"
+    }
+  ],
+  "malaysia": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "malaysia",
+      "name": "Malaysia"
+    }
+  ],
+  "maldives": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "maldives",
+      "name": "Maldives"
+    }
+  ],
+  "mauritius": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "mauritius",
+      "name": "Mauritius"
+    }
+  ],
+  "mid-office": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "what-is-dmc24",
+      "name": "What is DMC24?"
+    },
+    {
+      "slug": "mid-office",
+      "name": "Mid Office"
+    }
+  ],
+  "multi-dmc": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "what-is-dmc24",
+      "name": "What is DMC24?"
+    },
+    {
+      "slug": "multi-dmc",
+      "name": "Multi-DMC"
+    }
+  ],
+  "oman": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "oman",
+      "name": "Oman"
+    }
+  ],
+  "operations-logistics": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "mid-office",
+      "name": "Mid Office"
+    },
+    {
+      "slug": "operations-logistics",
+      "name": "Operations & Logistics"
+    }
+  ],
+  "pricing": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "pricing",
+      "name": "Pricing"
+    }
+  ],
+  "request-demo": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "request-demo",
+      "name": "Request a Demo"
+    }
+  ],
+  "resources": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "resources",
+      "name": "Resources"
+    }
+  ],
+  "rwanda": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "rwanda",
+      "name": "Rwanda"
+    }
+  ],
+  "sales-crm": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "mid-office",
+      "name": "Mid Office"
+    },
+    {
+      "slug": "sales-crm",
+      "name": "Sales & CRM"
+    }
+  ],
+  "saudi-arabia": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "saudi-arabia",
+      "name": "Saudi Arabia"
+    }
+  ],
+  "seychelles": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "seychelles",
+      "name": "Seychelles"
+    }
+  ],
+  "singapore": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "singapore",
+      "name": "Singapore"
+    }
+  ],
+  "south-africa": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "south-africa",
+      "name": "South Africa"
+    }
+  ],
+  "sri-lanka": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "sri-lanka",
+      "name": "Sri Lanka"
+    }
+  ],
+  "tanzania": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "tanzania",
+      "name": "Tanzania"
+    }
+  ],
+  "uae": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "uae",
+      "name": "UAE"
+    }
+  ],
+  "uganda": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "uganda",
+      "name": "Uganda"
+    }
+  ],
+  "what-is-dmc24": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "what-is-dmc24",
+      "name": "What is DMC24?"
+    }
+  ],
+  "why-dmc24": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "about",
+      "name": "About DMC24"
+    },
+    {
+      "slug": "why-dmc24",
+      "name": "Why DMC24?"
+    }
+  ],
+  "thailand": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "thailand",
+      "name": "Thailand"
+    }
+  ],
+  "home-preview": [],
+  "product-preview": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "product-preview",
+      "name": "What is DMC24? Preview"
+    }
+  ],
+  "features-preview": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "features-preview",
+      "name": "Features Preview"
+    }
+  ],
+  "benefits-preview": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "benefits-preview",
+      "name": "Benefits Preview"
+    }
+  ],
+  "international-market-control": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "international-market-control",
+      "name": "International Market Control"
+    }
+  ],
+  "enquiry-to-confirmation": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "enquiry-to-confirmation",
+      "name": "From Enquiry to Confirmation: Where DMCs Lose Time\u2014and How to Fix It"
+    }
+  ],
+  "file-wise-booking-profitability": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "file-wise-booking-profitability",
+      "name": "Your Booking Revenue Looks Good. But Is Every File Profitable?"
+    }
+  ],
+  "ai-itinerary-creation": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "ai-itinerary-creation",
+      "name": "AI Itinerary Creation: Faster Proposals Without Losing Your Destination Expertise"
+    }
+  ],
+  "contracts-and-travel-api-inventory": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "contracts-and-travel-api-inventory",
+      "name": "Your Own Contracts + Travel APIs: Finding the Right Inventory Mix"
+    }
+  ],
+  "grow-revenue-through-local-sales": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "grow-revenue-through-local-sales",
+      "name": "Beyond the Original Booking: Grow Revenue Through Local Sales"
+    }
+  ],
+  "why-dmcs-need-specialist-software": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "why-dmcs-need-specialist-software",
+      "name": "Why DMCs Need More Than Generic Travel Software"
+    }
+  ],
+  "connected-dmc-workflow": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "connected-dmc-workflow",
+      "name": "From Enquiry to Profitability: Designing a Connected DMC Workflow"
+    }
+  ],
+  "b2b-distribution-agent-needs": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "b2b-distribution-agent-needs",
+      "name": "B2B Distribution for DMCs: What Agents Actually Need"
+    }
+  ],
+  "local-sales-revenue-after-arrival": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "local-sales-revenue-after-arrival",
+      "name": "How Local Sales Can Extend Revenue After Arrival"
+    }
+  ],
+  "what-multi-dmc-really-means": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "what-multi-dmc-really-means",
+      "name": "What Multi-DMC Really Means"
+    }
+  ],
+  "why-file-wise-pnl-matters": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "why-file-wise-pnl-matters",
+      "name": "Why File-Wise P&L Matters"
+    }
+  ],
+  "real-time-reports-dmc-leaders": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "blogs",
+      "name": "Blogs & Insights"
+    },
+    {
+      "slug": "real-time-reports-dmc-leaders",
+      "name": "How Do Real-Time Reports Help DMC Leaders?"
+    }
+  ],
+  "botswana": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "botswana",
+      "name": "Botswana"
+    }
+  ],
+  "zimbabwe": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "zimbabwe",
+      "name": "Zimbabwe"
+    }
+  ],
+  "zambia": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "zambia",
+      "name": "Zambia"
+    }
+  ],
+  "namibia": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "namibia",
+      "name": "Namibia"
+    }
+  ],
+  "cambodia": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "cambodia",
+      "name": "Cambodia"
+    }
+  ],
+  "vietnam": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "destinations",
+      "name": "Destinations"
+    },
+    {
+      "slug": "vietnam",
+      "name": "Vietnam"
+    }
+  ],
+  "brochure-enquiries": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "brochure-enquiries",
+      "name": "Brochure enquiries"
+    }
+  ],
+  "website-analytics": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "website-analytics",
+      "name": "Website analytics"
+    }
+  ],
+  "admin": [
+    {
+      "slug": "admin",
+      "name": "Admin panel"
+    }
+  ],
+  "admin-login": [
+    {
+      "slug": "admin-login",
+      "name": "Admin login"
+    }
+  ],
+  "seo-management": [
+    {
+      "slug": "admin",
+      "name": "Admin panel"
+    },
+    {
+      "slug": "seo-management",
+      "name": "SEO Management"
+    }
+  ],
+  "demo-requests": [
+    {
+      "slug": "admin",
+      "name": "Admin"
+    },
+    {
+      "slug": "demo-requests",
+      "name": "Demo Requests"
+    }
+  ],
+  "case-study-uae": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "case-studies",
+      "name": "Case Studies"
+    },
+    {
+      "slug": "case-study-uae",
+      "name": "UAE"
+    }
+  ],
+  "case-study-sri-lanka": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "case-studies",
+      "name": "Case Studies"
+    },
+    {
+      "slug": "case-study-sri-lanka",
+      "name": "Sri Lanka"
+    }
+  ],
+  "case-study-maldives": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "case-studies",
+      "name": "Case Studies"
+    },
+    {
+      "slug": "case-study-maldives",
+      "name": "Maldives"
+    }
+  ],
+  "case-study-mauritius": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "case-studies",
+      "name": "Case Studies"
+    },
+    {
+      "slug": "case-study-mauritius",
+      "name": "Mauritius"
+    }
+  ],
+  "case-study-kerala": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "case-studies",
+      "name": "Case Studies"
+    },
+    {
+      "slug": "case-study-kerala",
+      "name": "Kerala, India"
+    }
+  ],
+  "case-study-kenya": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "case-studies",
+      "name": "Case Studies"
+    },
+    {
+      "slug": "case-study-kenya",
+      "name": "Kenya"
+    }
+  ],
+  "faqs-review": [
+    {
+      "slug": "index",
+      "name": "Home"
+    },
+    {
+      "slug": "faqs",
+      "name": "FAQs"
+    },
+    {
+      "slug": "faqs-review",
+      "name": "FAQ Review"
+    }
+  ],
+  "blog-management-review": [
+    {
+      "slug": "admin",
+      "name": "Admin"
+    },
+    {
+      "slug": "blog-management-review",
+      "name": "Blog Management Review"
+    }
+  ],
+  "blog-management": [
+    {
+      "slug": "admin",
+      "name": "Admin"
+    },
+    {
+      "slug": "blog-management",
+      "name": "Blog Management"
+    }
+  ],
+  "vishal-shah": [
+    {
+      "name": "Home",
+      "slug": "index"
+    },
+    {
+      "name": "Blogs & Insights",
+      "slug": "blogs"
+    },
+    {
+      "name": "Vishal Shah",
+      "slug": "vishal-shah"
+    }
+  ],
+  "email-automation": [
+    {
+      "slug": "admin",
+      "name": "Admin"
+    },
+    {
+      "slug": "email-automation",
+      "name": "Email Automation"
+    }
+  ],
+  "user-management-review": [
+    {
+      "slug": "admin",
+      "name": "Admin"
+    },
+    {
+      "slug": "user-management-review",
+      "name": "User Management Review"
+    }
+  ],
+  "user-management": [
+    {
+      "slug": "admin",
+      "name": "Admin"
+    },
+    {
+      "slug": "user-management",
+      "name": "User Management"
+    }
+  ]
+}

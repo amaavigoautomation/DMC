@@ -1,0 +1,38 @@
+{
+  "canonical_origin": "https://dmc24.in",
+  "page_types": {
+    "about": "AboutPage",
+    "about-puratech": "AboutPage",
+    "contact": "ContactPage",
+    "request-demo": "ContactPage",
+    "blogs": "CollectionPage",
+    "brochures": "CollectionPage",
+    "case-studies": "CollectionPage",
+    "destinations": "CollectionPage",
+    "resources": "CollectionPage",
+    "faqs": "FAQPage",
+    "faqs-review": "FAQPage",
+    "vishal-shah": "ProfilePage"
+  },
+  "non_software_pages": [
+    "about-puratech",
+    "icon-style-preview",
+    "contact",
+    "request-demo",
+    "blogs",
+    "brochures",
+    "case-studies",
+    "destinations",
+    "resources",
+    "home-preview",
+    "product-preview",
+    "features-preview",
+    "benefits-preview",
+    "faqs-review",
+    "vishal-shah",
+    "email-automation",
+    "user-management-review",
+    "user-management"
+  ],
+  "launch_origin": "https://dmc24.in"
+}

@@ -1,0 +1,993 @@
+[
+  {
+    "page": "about-puratech.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "about.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "b2b.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-b2b-hotel-booking.webp",
+        "alt": "DMC24 B2B hotel booking screen with search filters, room rates, availability and cancellation terms"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "b2c.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-b2c-booking-engine.webp",
+        "alt": "B2C travel booking website powered by DMC24, with service search and destination experience cards"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "benefits.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "blogs.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "bookings-reservations.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-bookings-reservations-dashboard.webp",
+        "alt": "DMC24 booking dashboard with travel files, reservation status, payments and booked services"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "brochures.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "case-studies.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "contact.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "contracting-products.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-contracting-products-dashboard.webp",
+        "alt": "DMC24 hotel contracting screen for supplier contracts, rates, offers, room allocations and stop sales"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "costing-quotations.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-costing-quotations-dashboard.webp",
+        "alt": "DMC24 tour quote builder with itinerary services, costs, quotation options and itinerary tools"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "dashboards-mis.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-dashboards-mis-dashboard.webp",
+        "alt": "DMC24 management dashboard with booking totals, invoices, cancellations and recent travel files"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "destinations.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/destinations-itinerary-hero.webp",
+        "alt": "DMC24 digital travel itinerary with trip details, a route map and daily activities"
+      },
+      {
+        "src": "img/cambodia-angkor-wat.webp",
+        "alt": "Angkor Wat temple towers reflected in a pool in Cambodia"
+      },
+      {
+        "src": "img/vietnam-ha-long-bay.webp",
+        "alt": "Limestone islands rising from the water in Ha Long Bay, Vietnam"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "dubai.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dubai-hero.webp",
+        "alt": "Dubai skyline and coastline with the Burj Al Arab at sunset"
+      },
+      {
+        "src": "img/dubai-desert.webp",
+        "alt": "Safari vehicles crossing Dubai sand dunes with the city skyline in the distance"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "egypt.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1400&q=88",
+        "alt": "Pyramid at Giza in Egypt with visitors at its base beneath a cloudy sky"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "faqs.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "features.html",
+    "images": [
+      {
+        "src": "embedded logo",
+        "alt": "DMC24"
+      },
+      {
+        "src": "embedded logo",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "finance-profitability.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-finance-profitability-dashboard.webp",
+        "alt": "DMC24 finance dashboard showing booking revenue, service costs and gross profit"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "hong-kong.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/hong-kong-hero.webp",
+        "alt": "Passenger ferry crossing Victoria Harbour beneath the illuminated Hong Kong skyline"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "how-to-adopt-dmc24.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "icon-style-preview.html",
+    "images": []
+  },
+  {
+    "page": "index.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-costing-quotations-dashboard.webp",
+        "alt": "DMC24 tour quote builder with itinerary services, costs, quotation options and itinerary tools"
+      },
+      {
+        "src": "img/maldives-hero.webp",
+        "alt": "Overwater villas, a tropical island resort and a speedboat on a turquoise Maldives lagoon"
+      },
+      {
+        "src": "img/thailand-bangkok-temple.webp",
+        "alt": "Traditional Thai temple with ornate tiled roofs and trees beside a Bangkok waterway"
+      },
+      {
+        "src": "img/dubai-hero.webp",
+        "alt": "Dubai skyline and coastline with the Burj Al Arab at sunset"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "integrations.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "kenya.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+        "alt": "Elephants grazing across open savanna grassland"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "local-sales.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-local-sales-activities.webp",
+        "alt": "DMC24 Local Sales screen with destination activities, search filters, prices and booking options"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "malaysia.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1600&q=86",
+        "alt": "Illuminated Petronas Twin Towers and Kuala Lumpur skyline at dusk"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "maldives.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/maldives-hero.webp",
+        "alt": "Overwater villas, a tropical island resort and a speedboat on a turquoise Maldives lagoon"
+      },
+      {
+        "src": "img/maldives-seaplane.webp",
+        "alt": "Seaplane flying over a Maldives island resort and turquoise lagoon"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "mauritius.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/mauritius-hero.webp",
+        "alt": "Aerial view of Le Morne mountain, green coastline and coral lagoon in Mauritius"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "mid-office.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-sales-overview-dashboard.webp",
+        "alt": "DMC24 Mid Office sales dashboard with enquiry, quotation and booking totals and market performance charts"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "multi-dmc.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "oman.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/oman-hero.webp",
+        "alt": "Muscat waterfront and traditional fort with mountains behind the bay at sunset"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "operations-logistics.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-operations-logistics-dashboard.webp",
+        "alt": "DMC24 operations screen for allocating services, vehicles, drivers and suppliers to bookings"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "pricing.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "request-demo.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "resources.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "rwanda.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/rwanda-landscape.webp",
+        "alt": "Elephant standing among dense green forest vegetation"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "sales-crm.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-sales-crm-leads.webp",
+        "alt": "DMC24 travel CRM dashboard listing enquiries, customers, follow-ups, quotations and lead status"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "saudi-arabia.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/destination-saudi-arabia.webp",
+        "alt": "Desert rock formations and a resort terrace at sunset"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "seychelles.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/seychelles-anse-source-argent.jpg",
+        "alt": "Granite boulders, palms and turquoise water at Anse Source d’Argent beach, La Digue, Seychelles"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "singapore.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/singapore-hero.webp",
+        "alt": "Singapore Marina Bay skyline, Marina Bay Sands and waterfront gardens after sunset"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "south-africa.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/destination-south-africa.webp",
+        "alt": "Elephants and antelope with Table Mountain and the South African coastline in the background"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "sri-lanka.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1578517929167-db9ed31cd5c6?auto=format&fit=crop&w=1400&q=85",
+        "alt": "Blue passenger train curving through a green hillside village in Sri Lanka"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "tanzania.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/tanzania-safari.webp",
+        "alt": "Safari vehicle on a grassy track beneath acacia trees at sunset in Tanzania"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "uae.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dubai-hero.webp",
+        "alt": "Dubai skyline and coastline with the Burj Al Arab at sunset"
+      },
+      {
+        "src": "img/dubai-desert.webp",
+        "alt": "Safari vehicles crossing Dubai sand dunes with the city skyline in the distance"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "uganda.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/uganda-falls.webp",
+        "alt": "Murchison Falls cascading into a river between forested cliffs in Uganda"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "what-is-dmc24.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-platform-dashboard.webp",
+        "alt": "DMC24 workspace for FIT and group quotations, bookings and destination services"
+      },
+      {
+        "src": "img/dmc24-sales-overview-dashboard.webp",
+        "alt": "DMC24 sales overview dashboard"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-enterprise-platform.webp",
+        "alt": "DMC24 Enterprise Platform architecture connecting users, mid-office modules, integrations, SQL Server data and AWS infrastructure"
+      }
+    ]
+  },
+  {
+    "page": "why-dmc24.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "thailand.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/thailand-bangkok-temple.webp",
+        "alt": "Traditional Thai temple with ornate tiled roofs and trees beside a Bangkok waterway"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "bali.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=86",
+        "alt": "Tiered Balinese temple beside a lake, reflected in the water"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "home-preview.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-costing-quotations-dashboard.webp",
+        "alt": "DMC24 tour quote builder with itinerary services, costs, quotation options and itinerary tools"
+      },
+      {
+        "src": "img/maldives-hero.webp",
+        "alt": "Overwater villas, a tropical island resort and a speedboat on a turquoise Maldives lagoon"
+      },
+      {
+        "src": "img/thailand-bangkok-temple.webp",
+        "alt": "Traditional Thai temple with ornate tiled roofs and trees beside a Bangkok waterway"
+      },
+      {
+        "src": "img/dubai-hero.webp",
+        "alt": "Dubai skyline and coastline with the Burj Al Arab at sunset"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "product-preview.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-platform-dashboard.webp",
+        "alt": "DMC24 workspace for FIT and group quotations, bookings and destination services"
+      },
+      {
+        "src": "img/dmc24-sales-overview-dashboard.webp",
+        "alt": "DMC24 sales overview dashboard"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "features-preview.html",
+    "images": [
+      {
+        "src": "embedded logo",
+        "alt": "DMC24"
+      },
+      {
+        "src": "embedded logo",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "benefits-preview.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "botswana.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+        "alt": "Elephants grazing across open savanna grassland"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "zimbabwe.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+        "alt": "Elephants grazing across open savanna grassland"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "zambia.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+        "alt": "Elephants grazing across open savanna grassland"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "namibia.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1704441409555-14108ace709d?auto=format&fit=crop&w=1400&q=85",
+        "alt": "Elephants grazing across open savanna grassland"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "cambodia.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/cambodia-angkor-wat.webp",
+        "alt": "Angkor Wat temple towers reflected in a pool in Cambodia"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  },
+  {
+    "page": "vietnam.html",
+    "images": [
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      },
+      {
+        "src": "img/vietnam-ha-long-bay.webp",
+        "alt": "Limestone islands rising from the water in Ha Long Bay, Vietnam"
+      },
+      {
+        "src": "img/dmc24-logo.png",
+        "alt": "DMC24"
+      }
+    ]
+  }
+]

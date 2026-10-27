@@ -1,0 +1,13 @@
+# Disposable local integration database only; never production credentials.
+services:
+ mysql:
+  image: mysql:8.4
+  environment:
+   MYSQL_ROOT_PASSWORD: local-test-only
+   MYSQL_DATABASE: dmc24_test
+   MYSQL_USER: dmc24_test
+   MYSQL_PASSWORD: local-test-only
+  ports:
+   - "127.0.0.1:3307:3306"
+  tmpfs:
+   - /var/lib/mysql

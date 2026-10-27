@@ -37,6 +37,10 @@ Some destinations and page sections are generated from shared JavaScript templat
 
 `server/generated.mjs` contains built page data, country defaults and the SEO catalog. It must be rebuilt after HTML, shared JavaScript, stylesheet or domain changes. Do not hand-edit generated files. Rebuilding also regenerates protected product brochure assets and their matching keys; deploy the matching `server/` and `private-assets/` together.
 
+### Shared header and footer
+
+The site header and footer live once, in `partials/header.html` and `partials/footer.html`. Pages that use them contain a marker pair, for example `<!-- partial:header --> ... <!-- /partial:header -->`; the build (`scripts/sync-partials.mjs`, run first by `scripts/build.mjs`) rewrites whatever is between the markers from the partial. To change the menu or footer, edit the partial and rebuild; do not edit the copy inside a page, because the next build overwrites it. `node scripts/sync-partials.mjs --check` reports pages that are out of date, and `npm test` fails if any are. Pages without markers (admin pages, previews, `destinations`, `features`, and the four pages whose header is injected by `js/main.js`) are not touched. The partials folder sits outside `website/` because the website root must contain only page files.
+
 ## 3. Runtime prerequisites
 
 Install Node.js 24, npm, Python 3 and MySQL 8.4. Use InnoDB, utf8mb4, strict SQL mode and a UTC database session/server. The adapter explicitly uses REPEATABLE READ for transactional work and disables `FOUND_ROWS` so duplicate/no-op results do not masquerade as successful edits.
